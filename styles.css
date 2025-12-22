@@ -1,134 +1,113 @@
 :root {
-  --bg-main: #eaf4ff;
-  --bg-card: #ffffff;
-  --text-main: #0f172a;
-  --muted: #64748b;
-  --accent: #1e6bb8;
-
-  --radius: 14px;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
+  --dark: #0f172a;
+  --light: #ffffff;
+  --bg: #f2f2f2;
 }
 
-* { box-sizing: border-box; }
+/* RESET */
+* {
+  box-sizing: border-box;
+}
 
-body {
+html, body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: var(--bg-main);
-  color: var(--text-main);
+  height: 100%;
+  font-family: sans-serif;
 }
 
-img { width: 100%; display: block; }
-
-/* ================= INTRO ================= */
+/* INTRO */
 .intro-section {
-  min-height: 100vh;
+  height: 100vh;
   background: url("assets/images/intro-bg.jpg") center / cover no-repeat;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-.nameplate {
+.name-plate {
   background: rgba(255,255,255,0.9);
-  border: 4px solid var(--accent);
-  border-radius: var(--radius);
-  padding: var(--space-md);
+  padding: 2rem;
   text-align: center;
 }
 
-.scroll-down {
+.scroll-arrow {
   position: absolute;
-  bottom: var(--space-lg);
-  font-size: 2.5rem;
+  bottom: 2rem;
   background: none;
   border: none;
+  font-size: 2rem;
   cursor: pointer;
 }
 
-/* ================= PROJECT OVERVIEW ================= */
-.project-overview-section {
-  display: grid;
-  grid-template-columns: 520px 1fr;
-  gap: var(--space-md);
-  padding: var(--space-lg);
+/* PROJECT OVERVIEW */
+.project-overview {
+  height: 100vh;
 }
 
-/* FILTER (REVERTED) */
-.filter-column {
+/* LEFT COLUMN */
+.project-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  padding: 2rem;
   background: url("assets/images/filter-bg.jpg") center / cover no-repeat;
-  padding: var(--space-md);
 }
 
 .filter-table {
   width: 100%;
-  border-collapse: collapse;
+  background: rgba(255,255,255,0.9);
 }
 
-.filter-table th,
-.filter-table td {
-  padding: 0.5rem;
-  border-bottom: 1px solid var(--muted);
+/* RIGHT COLUMN */
+.project-feed {
+  margin-left: 50%;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2rem;
+  background: var(--bg);
 }
 
-/* PROJECT VIEWPORT — THIS IS THE KEY FIX */
-.projects-viewport {
-  height: 760px;               /* viewport height */
-  overflow: hidden;            /* window behavior */
-}
-
-.projects-scroll {
-  height: 100%;
-  overflow-y: auto;            /* actual scrolling */
-  padding-right: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-}
-
-/* Scrollbar visible */
-.projects-scroll::-webkit-scrollbar {
+/* SCROLLBAR */
+.project-feed::-webkit-scrollbar {
   width: 10px;
 }
-.projects-scroll::-webkit-scrollbar-thumb {
-  background: var(--muted);
-  border-radius: 8px;
+
+.project-feed::-webkit-scrollbar-thumb {
+  background: #777;
+  border-radius: 6px;
 }
 
-/* ================= PROJECT CARD ================= */
+/* CARDS */
 .project-card {
-  background: #f2f2f2;
-  border-radius: var(--radius);
-  overflow: hidden;
+  margin-bottom: 4rem;
 }
 
 .project-card a {
+  display: block;
   color: inherit;
   text-decoration: none;
+}
+
+.project-image {
+  width: 100%;
   display: block;
 }
 
-/* IMAGE HEIGHT FIXED — FOOTER ALWAYS VISIBLE */
-.project-image img {
-  height: 420px;
-  object-fit: cover;
-}
-
-/* FOOTER */
 .project-footer {
-  background: var(--bg-card);
-  padding: var(--space-sm);
+  background: var(--light);
+  padding: 1rem;
 }
 
 .footer-line {
   height: 4px;
-  background: var(--text-main);
+  background: var(--dark);
   margin: 0.5rem 0;
 }
 
-/* TAG PILLS (UNCHANGED) */
+/* TAG PILLS — DO NOT CHANGE */
 .pill-row {
   display: flex;
   flex-wrap: wrap;
@@ -137,7 +116,7 @@ img { width: 100%; display: block; }
 
 .pill {
   position: relative;
-  border: 2px solid var(--text-main);
+  border: 2px solid var(--dark);
   border-radius: 999px;
   padding: 0.5rem 0.9rem;
   font-size: 0.8rem;
@@ -147,52 +126,34 @@ img { width: 100%; display: block; }
   position: absolute;
   top: -0.7rem;
   left: 0.8rem;
-  background: var(--bg-card);
+  background: var(--light);
   padding: 0 0.4rem;
   font-size: 0.65rem;
   font-weight: 600;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 .contact-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
-  padding: var(--space-lg);
+  display: flex;
+  min-height: 100vh;
 }
 
-.contact-form form {
-  display: grid;
-  gap: 1rem;
-}
-
-input, textarea {
-  padding: 0.75rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--muted);
-}
-
-html, body, .col1, .col2 {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-.col1, .col2 {
+.contact-image {
   width: 50%;
+  background: url("assets/images/contact.jpg") center / cover no-repeat;
 }
 
-.col1 {
-  background-color: pink;
-  position: fixed;
-  left: 0;
-  top: 0;
+.contact-form {
+  width: 50%;
+  padding: 3rem;
 }
 
-.col2 {
-  background-color: silver;
-  margin-left: 50%;
-  overflow: auto;
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
 }

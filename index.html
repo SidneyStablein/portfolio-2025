@@ -23,17 +23,13 @@
   </button>
 </header>
 
-<div class="col1">1</div>
-<div class="col2">
-  2
-  <div style="height:200vh;">scroll test</div>
-</div>
+
 
 <!-- ================= PROJECT OVERVIEW ================= -->
-<main id="projects" class="project-overview-section">
+<section id="projects" class="project-overview">
 
-  <!-- FILTER COLUMN (REVERTED STYLING) -->
-  <aside class="filter-column">
+  <!-- LEFT COLUMN (FILTER) -->
+  <aside class="project-filter">
     <table class="filter-table">
       <thead>
         <tr>
@@ -62,86 +58,83 @@
     </table>
   </aside>
 
-  <!-- PROJECT SCROLL WINDOW -->
-  <section class="projects-viewport" aria-label="Projects">
+  <!-- RIGHT COLUMN (SCROLLS) -->
+  <div class="project-feed">
 
-    <div class="projects-scroll">
+    <!-- CARD 1 -->
+    <article class="project-card" data-tags="graphic uxui">
+      <a href="projects/project1.html">
 
-      <!-- PROJECT 1 -->
-      <article class="project-card" data-tags="graphic uxui">
-        <a href="projects/project1.html">
+        <img
+          src="assets/images/project1-hero.jpg"
+          alt="Project One preview"
+          class="project-image"
+        >
 
-          <div class="project-image">
-            <img src="assets/images/project1-hero.jpg" alt="Project One preview">
+        <footer class="project-footer">
+          <div class="footer-line"></div>
+
+          <h3>Project One</h3>
+
+          <div class="pill-row">
+            <div class="pill">
+              <span class="pill-label">TAG</span>
+              Graphic Design
+            </div>
+            <div class="pill">
+              <span class="pill-label">TAG</span>
+              UX / UI
+            </div>
+            <div class="pill">
+              <span class="pill-label">DATE</span>
+              12 / 2025
+            </div>
           </div>
 
-          <footer class="project-footer">
-            <div class="footer-line"></div>
+          <div class="footer-line"></div>
+        </footer>
 
-            <h3>Project One</h3>
+      </a>
+    </article>
 
-            <div class="pill-row">
-              <div class="pill">
-                <span class="pill-label">TAG</span>
-                Graphic Design
-              </div>
+    <!-- CARD 2 -->
+    <article class="project-card" data-tags="web social">
+      <a href="projects/project2.html">
 
-              <div class="pill">
-                <span class="pill-label">TAG</span>
-                UX / UI
-              </div>
+        <img
+          src="assets/images/project2-hero.jpg"
+          alt="Project Two preview"
+          class="project-image"
+        >
 
-              <div class="pill">
-                <span class="pill-label">DATE</span>
-                12 / 2025
-              </div>
+        <footer class="project-footer">
+          <div class="footer-line"></div>
+
+          <h3>Project Two</h3>
+
+          <div class="pill-row">
+            <div class="pill">
+              <span class="pill-label">TAG</span>
+              Web Design
             </div>
-
-            <div class="footer-line"></div>
-          </footer>
-
-        </a>
-      </article>
-
-      <!-- PROJECT 2 -->
-      <article class="project-card" data-tags="web social">
-        <a href="projects/project2.html">
-
-          <div class="project-image">
-            <img src="assets/images/project2-hero.jpg" alt="Project Two preview">
+            <div class="pill">
+              <span class="pill-label">TAG</span>
+              Social Media
+            </div>
+            <div class="pill">
+              <span class="pill-label">DATE</span>
+              12 / 2025
+            </div>
           </div>
 
-          <footer class="project-footer">
-            <div class="footer-line"></div>
+          <div class="footer-line"></div>
+        </footer>
 
-            <h3>Project Two</h3>
+      </a>
+    </article>
 
-            <div class="pill-row">
-              <div class="pill">
-                <span class="pill-label">TAG</span>
-                Web Design
-              </div>
-
-              <div class="pill">
-                <span class="pill-label">TAG</span>
-                Social Media
-              </div>
-
-              <div class="pill">
-                <span class="pill-label">DATE</span>
-                12 / 2025
-              </div>
-            </div>
-
-            <div class="footer-line"></div>
-          </footer>
-
-        </a>
-      </article>
-
-    </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="contact-section">
