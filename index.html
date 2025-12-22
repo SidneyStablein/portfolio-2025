@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidney Shae | Artist & Designer</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ================= INTRO SECTION ================= -->
+  <header id="intro" class="intro-section">
+    <div class="nameplate">
+      <h1>Sidney Shae</h1>
+      <p class="subtitle">Artist & Designer</p>
+      <p class="location">MI | TX</p>
+    </div>
+
+    <button
+      class="scroll-down"
+      aria-label="Scroll to projects section"
+      data-scroll-target="#projects"
+    >
+      ↓
+    </button>
+  </header>
+
+  <!-- ================= PROJECT OVERVIEW ================= -->
+  <main id="projects" class="project-overview-section">
+
+    <!-- Filter Column -->
+    <aside class="filter-column" aria-label="Project filters">
+      <h2 class="visually-hidden">Filter Projects</h2>
+
+      <table class="filter-table">
+        <thead>
+          <tr>
+            <th scope="col">Tag</th>
+            <th scope="col">Check</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Graphic Design</td>
+            <td><input type="checkbox" data-tag="graphic" /></td>
+          </tr>
+          <tr>
+            <td>UX / UI</td>
+            <td><input type="checkbox" data-tag="uxui" /></td>
+          </tr>
+          <tr>
+            <td>Web Design</td>
+            <td><input type="checkbox" data-tag="web" /></td>
+          </tr>
+          <tr>
+            <td>Social Media</td>
+            <td><input type="checkbox" data-tag="social" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <!-- Projects Column -->
+    <section class="projects-column">
+      <article class="project-card" data-tags="graphic web">
+        <a href="projects/project-1.html">
+          <img src="assets/images/project-1.jpg" alt="Project 1 preview" />
+          <footer class="project-info">
+            <h3>Project Name</h3>
+            <ul class="tags">
+              <li>Graphic Design</li>
+              <li>Web Design</li>
+            </ul>
+          </footer>
+        </a>
+      </article>
+
+      <!-- duplicate .project-card for each project -->
+    </section>
+
+  </main>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="contact-section">
+    <div class="contact-image">
+      <img src="assets/images/contact-image.jpg" alt="" />
+    </div>
+
+    <div class="contact-form-wrapper">
+      <h2>Have an idea? Want to connect?</h2>
+      <p>Questions, comments, and connections — fill out the form below.</p>
+
+      <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+        <label>
+          <span class="visually-hidden">Name</span>
+          <input type="text" name="name" placeholder="Name" required />
+        </label>
+
+        <label>
+          <span class="visually-hidden">Email</span>
+          <input type="email" name="email" placeholder="Email" required />
+        </label>
+
+        <label>
+          <span class="visually-hidden">Comment</span>
+          <textarea name="comment" placeholder="Comment" required></textarea>
+        </label>
+
+        <button type="submit" aria-label="Send message">
+          →
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Sidney Shae</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
