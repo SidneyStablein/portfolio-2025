@@ -10,132 +10,137 @@
 
 <body>
 
-  <!-- ================= INTRO SECTION ================= -->
-  <header id="intro" class="intro-section">
-    <div class="nameplate">
-      <h1>Sidney Shae</h1>
-      <p class="subtitle">Artist & Designer</p>
-      <p class="location">MI | TX</p>
-    </div>
+<!-- ================= INTRO ================= -->
+<header id="intro" class="intro-section">
+  <div class="nameplate">
+    <h1>Sidney Shae</h1>
+    <p class="subtitle">Artist & Designer</p>
+    <p class="location">MI | TX</p>
+  </div>
 
-    <button
-      class="scroll-down"
-      aria-label="Scroll to projects"
-      data-scroll-target="#projects"
-    >
-      ↓
-    </button>
-  </header>
+  <button class="scroll-down" data-scroll-target="#projects" aria-label="Scroll to projects">
+    ↓
+  </button>
+</header>
 
-  <!-- ================= PROJECT OVERVIEW ================= -->
-  <main id="projects" class="project-overview-section">
+<!-- ================= PROJECT OVERVIEW ================= -->
+<main id="projects" class="project-overview-section">
 
-    <!-- FILTER COLUMN -->
-    <aside class="filter-column" aria-label="Project filters">
-      <table class="filter-table">
-        <thead>
-          <tr>
-            <th>Tag</th>
-            <th>Check</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Graphic Design</td>
-            <td><input type="checkbox" data-tag="graphic"></td>
-          </tr>
-          <tr>
-            <td>UX / UI</td>
-            <td><input type="checkbox" data-tag="uxui"></td>
-          </tr>
-          <tr>
-            <td>Web Design</td>
-            <td><input type="checkbox" data-tag="web"></td>
-          </tr>
-          <tr>
-            <td>Social Media</td>
-            <td><input type="checkbox" data-tag="social"></td>
-          </tr>
-        </tbody>
-      </table>
-    </aside>
+  <!-- FILTER -->
+  <aside class="filter-column">
+    <table class="filter-table">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Check</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Graphic Design</td>
+          <td><input type="checkbox" data-tag="graphic"></td>
+        </tr>
+        <tr>
+          <td>UX / UI</td>
+          <td><input type="checkbox" data-tag="uxui"></td>
+        </tr>
+        <tr>
+          <td>Web Design</td>
+          <td><input type="checkbox" data-tag="web"></td>
+        </tr>
+        <tr>
+          <td>Social Media</td>
+          <td><input type="checkbox" data-tag="social"></td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
 
-    <!-- PROJECTS COLUMN -->
-    <section class="projects-column" aria-label="Projects list">
+  <!-- PROJECT WINDOW -->
+  <section class="projects-window" aria-label="Projects">
+
+    <div class="projects-scroll">
 
       <!-- PROJECT 1 -->
       <article class="project-card" data-tags="graphic uxui">
         <a href="projects/project1.html">
+
           <div class="project-image">
             <img src="assets/images/project1-hero.jpg" alt="Project One preview">
           </div>
 
-          <footer class="project-meta">
-            <div class="divider"></div>
+          <footer class="project-footer">
+            <div class="footer-line"></div>
 
             <h3>Project One</h3>
 
-            <div class="pill-group">
-              <span class="pill">Graphic Design</span>
-              <span class="pill">UX / UI</span>
-              <span class="pill">12 / 2025</span>
+            <div class="pill-row">
+
+              <div class="pill">
+                <span class="pill-label">TAG 1</span>
+                Graphic Design
+              </div>
+
+              <div class="pill">
+                <span class="pill-label">TAG 2</span>
+                UX / UI
+              </div>
+
+              <div class="pill">
+                <span class="pill-label">DATE</span>
+                12 / 2025
+              </div>
+
             </div>
 
-            <div class="divider"></div>
+            <div class="footer-line"></div>
           </footer>
+
         </a>
       </article>
 
       <!-- PROJECT 2 -->
       <article class="project-card" data-tags="web social">
         <a href="projects/project2.html">
+
           <div class="project-image">
             <img src="assets/images/project2-hero.jpg" alt="Project Two preview">
           </div>
 
-          <footer class="project-meta">
-            <div class="divider"></div>
+          <footer class="project-footer">
+            <div class="footer-line"></div>
 
             <h3>Project Two</h3>
 
-            <div class="pill-group">
-              <span class="pill">Web Design</span>
-              <span class="pill">Social Media</span>
-              <span class="pill">12 / 2025</span>
+            <div class="pill-row">
+
+              <div class="pill">
+                <span class="pill-label">TAG 1</span>
+                Web Design
+              </div>
+
+              <div class="pill">
+                <span class="pill-label">TAG 2</span>
+                Social Media
+              </div>
+
+              <div class="pill">
+                <span class="pill-label">DATE</span>
+                12 / 2025
+              </div>
+
             </div>
 
-            <div class="divider"></div>
+            <div class="footer-line"></div>
           </footer>
+
         </a>
       </article>
 
-    </section>
-  </main>
-
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact-section">
-    <div class="contact-image">
-      <img src="assets/images/contact-image.jpg" alt="">
-    </div>
-
-    <div class="contact-form-wrapper">
-      <h2>Have an idea? Want to connect?</h2>
-      <p>Questions, comments, and connections — fill out the form below.</p>
-
-      <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="comment" placeholder="Comment" required></textarea>
-
-        <button type="submit" aria-label="Send message">→</button>
-      </form>
     </div>
   </section>
+</main>
 
-  <footer class="site-footer">
-    <p>© 2025 Sidney Shae</p>
-  </footer>
-
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
