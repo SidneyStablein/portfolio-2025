@@ -26,7 +26,7 @@
 <!-- ================= PROJECT OVERVIEW ================= -->
 <main id="projects" class="project-overview-section">
 
-  <!-- FILTER -->
+  <!-- FILTER COLUMN (REVERTED STYLING) -->
   <aside class="filter-column">
     <table class="filter-table">
       <thead>
@@ -56,8 +56,8 @@
     </table>
   </aside>
 
-  <!-- PROJECT WINDOW -->
-  <section class="projects-window" aria-label="Projects">
+  <!-- PROJECT SCROLL WINDOW -->
+  <section class="projects-viewport" aria-label="Projects">
 
     <div class="projects-scroll">
 
@@ -75,14 +75,13 @@
             <h3>Project One</h3>
 
             <div class="pill-row">
-
               <div class="pill">
-                <span class="pill-label">TAG 1</span>
+                <span class="pill-label">TAG</span>
                 Graphic Design
               </div>
 
               <div class="pill">
-                <span class="pill-label">TAG 2</span>
+                <span class="pill-label">TAG</span>
                 UX / UI
               </div>
 
@@ -90,7 +89,6 @@
                 <span class="pill-label">DATE</span>
                 12 / 2025
               </div>
-
             </div>
 
             <div class="footer-line"></div>
@@ -113,14 +111,13 @@
             <h3>Project Two</h3>
 
             <div class="pill-row">
-
               <div class="pill">
-                <span class="pill-label">TAG 1</span>
+                <span class="pill-label">TAG</span>
                 Web Design
               </div>
 
               <div class="pill">
-                <span class="pill-label">TAG 2</span>
+                <span class="pill-label">TAG</span>
                 Social Media
               </div>
 
@@ -128,7 +125,6 @@
                 <span class="pill-label">DATE</span>
                 12 / 2025
               </div>
-
             </div>
 
             <div class="footer-line"></div>
@@ -140,6 +136,25 @@
     </div>
   </section>
 </main>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact-section">
+  <div class="contact-image">
+    <img src="assets/images/contact-image.jpg" alt="">
+  </div>
+
+  <div class="contact-form">
+    <h2>Let’s connect</h2>
+    <p>Questions, collaborations, or ideas — reach out below.</p>
+
+    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">→</button>
+    </form>
+  </div>
+</section>
 
 <script src="main.js"></script>
 </body>
