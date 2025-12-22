@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sidney Shae | Artist & Designer</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
     <button
       class="scroll-down"
-      aria-label="Scroll to projects section"
+      aria-label="Scroll to projects"
       data-scroll-target="#projects"
     >
       ↓
@@ -30,62 +30,92 @@
   <!-- ================= PROJECT OVERVIEW ================= -->
   <main id="projects" class="project-overview-section">
 
-    <!-- Filter Column -->
+    <!-- FILTER COLUMN -->
     <aside class="filter-column" aria-label="Project filters">
-      <h2 class="visually-hidden">Filter Projects</h2>
-
       <table class="filter-table">
         <thead>
           <tr>
-            <th scope="col">Tag</th>
-            <th scope="col">Check</th>
+            <th>Tag</th>
+            <th>Check</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Graphic Design</td>
-            <td><input type="checkbox" data-tag="graphic" /></td>
+            <td><input type="checkbox" data-tag="graphic"></td>
           </tr>
           <tr>
             <td>UX / UI</td>
-            <td><input type="checkbox" data-tag="uxui" /></td>
+            <td><input type="checkbox" data-tag="uxui"></td>
           </tr>
           <tr>
             <td>Web Design</td>
-            <td><input type="checkbox" data-tag="web" /></td>
+            <td><input type="checkbox" data-tag="web"></td>
           </tr>
           <tr>
             <td>Social Media</td>
-            <td><input type="checkbox" data-tag="social" /></td>
+            <td><input type="checkbox" data-tag="social"></td>
           </tr>
         </tbody>
       </table>
     </aside>
 
-    <!-- Projects Column -->
-    <section class="projects-column">
-      <article class="project-card" data-tags="graphic web">
-        <a href="projects/project-1.html">
-          <img src="assets/images/project-1.jpg" alt="Project 1 preview" />
-          <footer class="project-info">
-            <h3>Project Name</h3>
-            <ul class="tags">
-              <li>Graphic Design</li>
-              <li>Web Design</li>
-            </ul>
+    <!-- PROJECTS COLUMN -->
+    <section class="projects-column" aria-label="Projects list">
+
+      <!-- PROJECT 1 -->
+      <article class="project-card" data-tags="graphic uxui">
+        <a href="projects/project1.html">
+          <div class="project-image">
+            <img src="assets/images/project1-hero.jpg" alt="Project One preview">
+          </div>
+
+          <footer class="project-meta">
+            <div class="divider"></div>
+
+            <h3>Project One</h3>
+
+            <div class="pill-group">
+              <span class="pill">Graphic Design</span>
+              <span class="pill">UX / UI</span>
+              <span class="pill">12 / 2025</span>
+            </div>
+
+            <div class="divider"></div>
           </footer>
         </a>
       </article>
 
-      <!-- duplicate .project-card for each project -->
-    </section>
+      <!-- PROJECT 2 -->
+      <article class="project-card" data-tags="web social">
+        <a href="projects/project2.html">
+          <div class="project-image">
+            <img src="assets/images/project2-hero.jpg" alt="Project Two preview">
+          </div>
 
+          <footer class="project-meta">
+            <div class="divider"></div>
+
+            <h3>Project Two</h3>
+
+            <div class="pill-group">
+              <span class="pill">Web Design</span>
+              <span class="pill">Social Media</span>
+              <span class="pill">12 / 2025</span>
+            </div>
+
+            <div class="divider"></div>
+          </footer>
+        </a>
+      </article>
+
+    </section>
   </main>
 
-  <!-- ================= CONTACT SECTION ================= -->
+  <!-- ================= CONTACT ================= -->
   <section id="contact" class="contact-section">
     <div class="contact-image">
-      <img src="assets/images/contact-image.jpg" alt="" />
+      <img src="assets/images/contact-image.jpg" alt="">
     </div>
 
     <div class="contact-form-wrapper">
@@ -93,24 +123,11 @@
       <p>Questions, comments, and connections — fill out the form below.</p>
 
       <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-        <label>
-          <span class="visually-hidden">Name</span>
-          <input type="text" name="name" placeholder="Name" required />
-        </label>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="comment" placeholder="Comment" required></textarea>
 
-        <label>
-          <span class="visually-hidden">Email</span>
-          <input type="email" name="email" placeholder="Email" required />
-        </label>
-
-        <label>
-          <span class="visually-hidden">Comment</span>
-          <textarea name="comment" placeholder="Comment" required></textarea>
-        </label>
-
-        <button type="submit" aria-label="Send message">
-          →
-        </button>
+        <button type="submit" aria-label="Send message">→</button>
       </form>
     </div>
   </section>
