@@ -1,30 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-  document.querySelectorAll("[data-scroll-target]").forEach(button => {
-    button.addEventListener("click", () => {
-      const target = document.querySelector(button.dataset.scrollTarget);
-      if (target) target.scrollIntoView({ behavior: "smooth" });
-    });
+// Intro scroll
+document.querySelector(".scroll-arrow")
+  .addEventListener("click", () => {
+    document.getElementById("projects")
+      .scrollIntoView({ behavior: "smooth" });
   });
 
-  const checkboxes = document.querySelectorAll(".filter-table input");
-  const projects = document.querySelectorAll(".project-card");
+// Project filtering
+const checkboxes = document.querySelectorAll(".filter-table input");
+const cards = document.querySelectorAll(".project-card");
 
-  checkboxes.forEach(box => {
-    box.addEventListener("change", () => {
-      const activeTags = [...checkboxes]
-        .filter(cb => cb.checked)
-        .map(cb => cb.dataset.tag);
+checkboxes.forEach(box => {
+  box.addEventListener("change", () => {
+    const activeTags = [...checkboxes]
+      .filter(cb => cb.checked)
+      .map(cb => cb.dataset.tag);
 
-      projects.forEach(project => {
-        const tags = project.dataset.tags.split(" ");
-        const show =
-          activeTags.length === 0 ||
-          activeTags.some(tag => tags.includes(tag));
+    cards.forEach(card => {
+      const tags = card.dataset.tags.split(" ");
+      const show =
+        activeTags.length === 0 ||
+        activeTags.some(tag => tags.includes(tag));
 
-        project.style.display = show ? "block" : "none";
-      });
+      card.style.display = show ? "block" : "none";
     });
   });
-
 });
