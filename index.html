@@ -138,15 +138,36 @@
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="contact-section">
-  <div class="contact-image"></div>
 
+  <!-- LEFT: SQUARE IMAGE -->
+  <div class="contact-image-wrapper">
+    <img
+      src="assets/images/contact-image.jpg"
+      alt="Contact image"
+      class="contact-image"
+    >
+  </div>
+
+  <!-- RIGHT: TEXT + FORM -->
   <div class="contact-form">
-    <h2>Let’s connect</h2>
-    <form>
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button>→</button>
+    <p class="contact-intro">
+      Questions, comments, or ideas? Let’s connect!
+    </p>
+
+    <form class="contact-form-fields">
+
+      <!-- NAME + EMAIL -->
+      <div class="form-row">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <!-- MESSAGE + SEND -->
+      <div class="form-row message-row">
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" aria-label="Send message">→</button>
+      </div>
+
     </form>
   </div>
 </section>

@@ -99,50 +99,6 @@ html, body {
   background: var(--light);
   padding: 1.5rem;
 }
-
-/* ================= CONTACT ================= */
-/*
-.contact-section {
-  display: flex;
-  min-height: 100vh;
-}
-
-.contact-image {
-  width: 50%;
-  background: #ddd;
-}
-
-.contact-form {
-  width: 50%;
-  padding: 3rem;
-}
-*/
-/* CONTACT */
-.contact-section {
-  display: flex;
-  min-height: 100vh;
-}
-
-.contact-image {
-  width: 50%;
-  background: url("assets/images/contact.jpg") center / cover no-repeat;
-}
-
-.contact-form {
-  width: 50%;
-  padding: 3rem;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-}
-
 .pill-row {
   display: flex;
   flex-wrap: wrap;
@@ -165,4 +121,70 @@ html, body {
   padding: 0 0.4rem;
   font-size: 0.65rem;
   font-weight: 600;
+}
+
+/* ================= CONTACT ================= */
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 8vw;
+  min-height: 80vh;
+}
+
+/* LEFT IMAGE */
+.contact-image-wrapper {
+  flex-shrink: 0;
+}
+
+.contact-image {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.contact-form {
+  flex: 1;
+}
+
+.contact-intro {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* FORM LAYOUT */
+.contact-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* NAME + EMAIL */
+.form-row input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* MESSAGE + SEND */
+.message-row textarea {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: none;
+  min-height: 120px;
+}
+
+.message-row button {
+  width: 48px;
+  font-size: 1.4rem;
+  background: none;
+  border: 2px solid var(--dark);
+  cursor: pointer;
 }
