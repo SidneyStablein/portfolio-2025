@@ -21,7 +21,7 @@ checkboxes.forEach(box => {
         activeTags.length === 0 ||
         activeTags.some(tag => tags.includes(tag));
 
-      card.style.display = show ? "block" : "none";
+      card.style.display = show ? "" : "none";
     });
   });
 });

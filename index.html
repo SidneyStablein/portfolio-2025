@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sidney Shae | Artist & Designer</title>
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -18,139 +17,78 @@
     <p class="location">MI | TX</p>
   </div>
 
-  <button class="scroll-down" data-scroll-target="#projects" aria-label="Scroll to projects">
+  <button class="scroll-arrow" aria-label="Scroll to projects">
     ↓
   </button>
 </header>
 
-
-
 <!-- ================= PROJECT OVERVIEW ================= -->
 <section id="projects" class="project-overview">
 
-  <!-- LEFT COLUMN (FILTER) -->
-  <aside class="project-filter">
-    <table class="filter-table">
-      <thead>
-        <tr>
-          <th>Tag</th>
-          <th>Check</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Graphic Design</td>
-          <td><input type="checkbox" data-tag="graphic"></td>
-        </tr>
-        <tr>
-          <td>UX / UI</td>
-          <td><input type="checkbox" data-tag="uxui"></td>
-        </tr>
-        <tr>
-          <td>Web Design</td>
-          <td><input type="checkbox" data-tag="web"></td>
-        </tr>
-        <tr>
-          <td>Social Media</td>
-          <td><input type="checkbox" data-tag="social"></td>
-        </tr>
-      </tbody>
-    </table>
-  </aside>
+  <div class="project-layout">
 
-  <!-- RIGHT COLUMN (SCROLLS) -->
-  <div class="project-feed">
+    <!-- LEFT COLUMN (FIXED) -->
+    <aside class="project-filter">
+      <table class="filter-table">
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Check</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Graphic Design</td>
+            <td><input type="checkbox" data-tag="graphic"></td>
+          </tr>
+          <tr>
+            <td>UX / UI</td>
+            <td><input type="checkbox" data-tag="uxui"></td>
+          </tr>
+          <tr>
+            <td>Web Design</td>
+            <td><input type="checkbox" data-tag="web"></td>
+          </tr>
+          <tr>
+            <td>Social Media</td>
+            <td><input type="checkbox" data-tag="social"></td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
 
-    <!-- CARD 1 -->
-    <article class="project-card" data-tags="graphic uxui">
-      <a href="projects/project1.html">
+    <!-- RIGHT COLUMN (SCROLLS) -->
+    <div class="project-feed">
 
-        <img
-          src="assets/images/project1-hero.jpg"
-          alt="Project One preview"
-          class="project-image"
-        >
-
+      <article class="project-card" data-tags="graphic uxui">
+        <img src="assets/images/project1-hero.jpg" alt="">
         <footer class="project-footer">
-          <div class="footer-line"></div>
-
           <h3>Project One</h3>
-
-          <div class="pill-row">
-            <div class="pill">
-              <span class="pill-label">TAG</span>
-              Graphic Design
-            </div>
-            <div class="pill">
-              <span class="pill-label">TAG</span>
-              UX / UI
-            </div>
-            <div class="pill">
-              <span class="pill-label">DATE</span>
-              12 / 2025
-            </div>
-          </div>
-
-          <div class="footer-line"></div>
         </footer>
+      </article>
 
-      </a>
-    </article>
-
-    <!-- CARD 2 -->
-    <article class="project-card" data-tags="web social">
-      <a href="projects/project2.html">
-
-        <img
-          src="assets/images/project2-hero.jpg"
-          alt="Project Two preview"
-          class="project-image"
-        >
-
+      <article class="project-card" data-tags="web social">
+        <img src="assets/images/project2-hero.jpg" alt="">
         <footer class="project-footer">
-          <div class="footer-line"></div>
-
           <h3>Project Two</h3>
-
-          <div class="pill-row">
-            <div class="pill">
-              <span class="pill-label">TAG</span>
-              Web Design
-            </div>
-            <div class="pill">
-              <span class="pill-label">TAG</span>
-              Social Media
-            </div>
-            <div class="pill">
-              <span class="pill-label">DATE</span>
-              12 / 2025
-            </div>
-          </div>
-
-          <div class="footer-line"></div>
         </footer>
+      </article>
 
-      </a>
-    </article>
-
+    </div>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="contact-section">
-  <div class="contact-image">
-    <img src="assets/images/contact-image.jpg" alt="">
-  </div>
+  <div class="contact-image"></div>
 
   <div class="contact-form">
     <h2>Let’s connect</h2>
-    <p>Questions, collaborations, or ideas — reach out below.</p>
-
-    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit">→</button>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button>→</button>
     </form>
   </div>
 </section>
