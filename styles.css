@@ -101,6 +101,7 @@ html, body {
 }
 
 /* ================= CONTACT ================= */
+/*
 .contact-section {
   display: flex;
   min-height: 100vh;
@@ -114,6 +115,32 @@ html, body {
 .contact-form {
   width: 50%;
   padding: 3rem;
+}
+*/
+/* CONTACT */
+.contact-section {
+  display: flex;
+  min-height: 100vh;
+}
+
+.contact-image {
+  width: 50%;
+  background: url("assets/images/contact.jpg") center / cover no-repeat;
+}
+
+.contact-form {
+  width: 50%;
+  padding: 3rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
 }
 
 .pill-row {
