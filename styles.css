@@ -1,6 +1,6 @@
 :root {
   --dark: #0f172a;
-  --light: #ffffff;
+  --light: #E0EFFF;
   --bg: #E0EFFF;
 }
 
@@ -138,8 +138,7 @@ html, body {
 }
 
 .contact-image {
-  width: 320px;
-  height: 320px;
+
   object-fit: cover;
 }
 
