@@ -187,7 +187,7 @@ html, body {
   resize: none;
   min-height: 120px;
   border: 2px solid var(--button-blue);
-  border-radius: 200px;
+  border-radius: 0px;
 }
 
 .message-row button {
