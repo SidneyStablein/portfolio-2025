@@ -163,8 +163,6 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  border: 2px solid var(--button-blue);
-  border-radius: 20%;
 }
 
 .form-row {
@@ -177,8 +175,8 @@ html, body {
   flex: 1;
   padding: 0.75rem;
   font-size: 1rem;
-  border: 2px solid #b95121;
-  border-radius: 20%;
+  border: 2px solid var(--button-blue);
+  border-radius: 999px;
 }
 
 /* MESSAGE + SEND */
@@ -188,8 +186,8 @@ html, body {
   font-size: 1rem;
   resize: none;
   min-height: 120px;
-    border: 2px solid #21b94e;
-  border-radius: 20%;
+  border: 2px solid var(--button-blue);
+  border-radius: 999px;
 }
 
 .message-row button {
@@ -197,7 +195,7 @@ html, body {
   font-size: 1.4rem;
   background: none;
   border: 2px solid var(--button-blue);
-  border-radius: 20%;
+  border-radius: 999px;
   color: var(--button-blue);
   cursor: pointer;
 }
