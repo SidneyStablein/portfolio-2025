@@ -176,7 +176,7 @@ html, body {
   padding: 0.75rem;
   font-size: 1rem;
   border: 2px solid var(--button-blue);
-  border-radius: 999px;
+  border-radius: 20px;
 }
 
 /* MESSAGE + SEND */
@@ -187,7 +187,7 @@ html, body {
   resize: none;
   min-height: 120px;
   border: 2px solid var(--button-blue);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .message-row button {
@@ -195,7 +195,7 @@ html, body {
   font-size: 1.4rem;
   background: none;
   border: 2px solid var(--button-blue);
-  border-radius: 999px;
+  border-radius: 20px;
   color: var(--button-blue);
   cursor: pointer;
 }
