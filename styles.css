@@ -11,6 +11,7 @@
 html, body {
   margin: 0;
   font-family: sans-serif;
+  background: var(--bg);
 }
 
 /* ================= INTRO ================= */
@@ -138,7 +139,8 @@ html, body {
 }
 
 .contact-image {
-
+  width: 352px;
+  height: 251px;
   object-fit: cover;
 }
 
