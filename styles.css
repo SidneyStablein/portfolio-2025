@@ -73,7 +73,7 @@ html, body {
 }
 
 .project-feed::-webkit-scrollbar-thumb {
-  background: var(--medium);
+  background: var(--button-blue);
 }
 
 /* CARDS */
