@@ -20,6 +20,88 @@ html, body {
   padding-left: clamp(1.5rem, 6vw, 8vw);
   padding-right: clamp(1.5rem, 6vw, 8vw);
 }
+/* ================= HEADER ================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--light);
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  border-bottom: 1px solid var(--medium);
+}
+
+/* Visible state (index page scroll) */
+.site-header.visible {
+  transform: translateY(0);
+}
+
+/* Sticky version (project pages) */
+.site-header.sticky {
+  position: sticky;
+  transform: translateY(0);
+}
+
+/* NAV CONTENT */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem clamp(1.5rem, 6vw, 8vw);
+}
+
+.nav-home {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* ================= DROPDOWN ================= */
+
+.nav-projects {
+  position: relative;
+}
+
+.projects-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+.projects-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--light);
+  list-style: none;
+  padding: 0.75rem 0;
+  margin: 0;
+  min-width: 180px;
+  border: 1px solid var(--medium);
+  display: none;
+}
+
+.projects-dropdown li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.projects-dropdown li a:hover {
+  background: var(--medium);
+}
+
+/* Show dropdown */
+.nav-projects.open .projects-dropdown {
+  display: block;
+}
 
 /* ================= INTRO ================= */
 .intro-section {
