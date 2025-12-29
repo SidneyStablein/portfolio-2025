@@ -105,7 +105,7 @@ html, body {
 
 .project-footer {
   padding: 1rem;
-  background: #eff7ff;
+  background: #f3f9ff;
   padding: 1.5rem;
 }
 .pill-row {
@@ -130,6 +130,10 @@ html, body {
   padding: 0 0.4rem;
   font-size: 0.65rem;
   font-weight: 600;
+}
+
+.project-footer h3 {
+text-align: left;
 }
 
 /* ================= CONTACT ================= */
@@ -203,6 +207,76 @@ html, body {
   color: var(--button-blue);
   cursor: pointer;
 }
+
+/*project page*/
+.project-hero img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.project-hero-meta {
+  padding: 2rem 8vw;
+}
+
+.project-hero-meta h1 {
+  margin-bottom: 1rem;
+}
+
+.project-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 6rem 8vw;
+  align-items: center;
+}
+
+.project-split img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1.5rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Largest image */
+.project-gallery img.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.project-related {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 6rem 8vw;
+}
+
+.info-card {
+  background: #f3f9ff;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card img {
+  height: 280px;
+  object-fit: cover;
+}
+
+.info-card-text {
+  padding: 1.5rem;
+}
+
 
 /*footer*/
 footer {
