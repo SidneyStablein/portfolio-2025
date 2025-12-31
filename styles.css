@@ -138,13 +138,69 @@ html, body {
 }
 
 /* LEFT COLUMN */
+/* ================= PROJECT FILTER STYLING ================= */
+
 .project-filter {
   width: 40%;
   position: sticky;
   top: 0;
   height: 80vh;
-  padding: 2rem;
-  background: var(--bg);
+  padding: 2.5rem;
+
+  /* background image */
+  background-image: url("assets/images/project-filter-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* fallback color */
+  background-color: var(--bg);
+}
+
+/* TABLE BASE */
+.filter-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+}
+
+/* CELL SPACING */
+.filter-table th,
+.filter-table td {
+  padding: 1rem 0.75rem;
+}
+
+/* HORIZONTAL RULES */
+.filter-table tr {
+  border-bottom: 3px solid #000;
+}
+
+/* TOP RULE */
+.filter-table thead tr {
+  border-top: 3px solid #000;
+}
+
+/* CHECK COLUMN DIVIDER */
+.filter-table th:last-child,
+.filter-table td:last-child {
+  width: 60px;
+  text-align: center;
+  border-left: 3px solid #000;
+}
+
+/* CHECKBOX STYLE */
+.filter-table input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* CHECKED STATE */
+.filter-table input[type="checkbox"]:checked {
+  background: #000;
 }
 
 /* RIGHT COLUMN */
