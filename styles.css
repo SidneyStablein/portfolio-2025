@@ -145,7 +145,10 @@ html, body {
   position: sticky;
   top: 0;
   height: 80vh;
-  padding: 2.5rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   /* background image */
   background-image: url("assets/images/project-filter-background.png");
@@ -160,6 +163,7 @@ html, body {
 /* TABLE BASE */
 .filter-table {
   width: 100%;
+  max-width: 420px;
   border-collapse: collapse;
   color: #000;
 }
