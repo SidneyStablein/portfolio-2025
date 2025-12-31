@@ -404,7 +404,7 @@ text-align: left;
 }
 
 .gallery-small img {
-  width: 350px;
+  width: 300px;
   height: 350px;
   object-fit: contain;
 }
