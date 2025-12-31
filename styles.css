@@ -150,6 +150,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 0 0 3px #000;
 
   /* background image */
   background-image: url("assets/images/project-filter-background.png");
@@ -177,12 +178,12 @@ html, body {
 
 /* HORIZONTAL RULES */
 .filter-table tr {
-  border-bottom: 3px solid #2480c3;
+  border-bottom: 1.5px solid #2480c3;
 }
 
 /* TOP RULE */
 .filter-table thead tr {
-  border-top: 3px solid #2480c3;
+  border-top: 1.5px solid #2480c3;
 }
 
 /* CHECK COLUMN DIVIDER */
@@ -190,7 +191,7 @@ html, body {
 .filter-table td:last-child {
   width: 60px;
   text-align: center;
-  border-left: 3px solid #2480c3;
+  border-left: 1.5px solid #2480c3;
 }
 
 /* CHECKBOX STYLE */
@@ -198,7 +199,7 @@ html, body {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 3px solid #2480c3;
+  border: 1.5px solid #2480c3;
   background: transparent;
   cursor: pointer;
 }
