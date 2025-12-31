@@ -149,7 +149,7 @@ html, body {
 
   /* background image */
   background-image: url("assets/images/project-filter-background.png");
-  background-size: cover;
+  background-size:contain;
   background-position: center;
   background-repeat: no-repeat;
 
