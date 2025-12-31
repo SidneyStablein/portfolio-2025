@@ -416,6 +416,18 @@ text-align: left;
   object-fit: cover;
 }
 
+.project-gallery-three {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.gallery-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
 /* ================= RELATED CARDS ================= */
 
 .project-related {
