@@ -166,7 +166,7 @@ html, body {
   width: 100%;
   max-width: 420px;
   border-collapse: collapse;
-  color: #000;
+  color: #2480c3;
 }
 
 /* CELL SPACING */
@@ -177,12 +177,12 @@ html, body {
 
 /* HORIZONTAL RULES */
 .filter-table tr {
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid #2480c3;
 }
 
 /* TOP RULE */
 .filter-table thead tr {
-  border-top: 3px solid #000;
+  border-top: 3px solid #2480c3;
 }
 
 /* CHECK COLUMN DIVIDER */
@@ -190,7 +190,7 @@ html, body {
 .filter-table td:last-child {
   width: 60px;
   text-align: center;
-  border-left: 3px solid #000;
+  border-left: 3px solid #2480c3;
 }
 
 /* CHECKBOX STYLE */
@@ -198,14 +198,14 @@ html, body {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 3px solid #000;
+  border: 3px solid #2480c3;
   background: transparent;
   cursor: pointer;
 }
 
 /* CHECKED STATE */
 .filter-table input[type="checkbox"]:checked {
-  background: #000;
+  background: #2480c3;
 }
 
 /* RIGHT COLUMN */
