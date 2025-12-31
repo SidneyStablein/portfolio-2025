@@ -145,22 +145,36 @@ html, body {
   position: sticky;
   top: 0;
   height: 80vh;
+
   padding-left: 4rem;
   padding-right: 4rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 3px #000;
 
   /* background image */
   background-image: url("assets/images/project-filter-background.png");
-  background-size:contain;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
   /* fallback color */
   background-color: var(--bg);
+
+  /* needed for overlay */
+  overflow: hidden;
 }
+
+/* SHADOW OVERLAY ON BACKGROUND IMAGE */
+.project-filter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15); /* adjust darkness here */
+  pointer-events: none;
+}
+
 
 /* TABLE BASE */
 .filter-table {
@@ -168,6 +182,8 @@ html, body {
   max-width: 420px;
   border-collapse: collapse;
   color: #2480c3;
+  position: relative;
+  z-index: 1;
 }
 
 /* CELL SPACING */
