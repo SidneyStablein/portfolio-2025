@@ -416,18 +416,19 @@ text-align: left;
   object-fit: cover;
 }
 
-.project-gallery-three {
+.project-gallery-fluid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
   gap: 1.5rem;
-  align-items: stretch;
+  justify-content: start;
 }
 
-.gallery-three {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+.project-gallery-fluid img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
+
 /* ================= RELATED CARDS ================= */
 
 .project-related {
