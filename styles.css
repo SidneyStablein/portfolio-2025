@@ -422,6 +422,7 @@ text-align: left;
 .gallery-large {
   display: flex;
   max-height: 520px;
+  max-width: 520px;
 }
 
 .gallery-large img {
