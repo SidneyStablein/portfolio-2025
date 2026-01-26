@@ -444,101 +444,60 @@ text-align: left;
 }
 /*=====GRIDS=======*/
 
-.grid-2x2 {
+/* Section spacing and text */
+.image-section {
+  padding: 4rem 0; /* vertical spacing between sections */
+}
+
+.image-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem; /* space between h2 and p */
+}
+
+.image-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem; /* space between text and images */
+  color: #555;
+}
+
+/* General image grid */
+.image-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-.grid-2x2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.grid-2x2 h2 {
-  grid-column: 1 / -1;
-}
-
-.grid-2x2 p {
-  grid-column: 1 / -1;
-}
-
-.grid-2x2 img {
+.image-grid img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border-radius: 6px;
-}
-
-.grid-single {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.grid-single h2 {
-  grid-column: 1 / -1;
-  margin-bottom: 0.25rem;
-}
-
-.grid-single p {
-  grid-column: 1 / -1;
-  margin-bottom: 1rem;
-}
-
-.grid-single img {
-  width: 100%;
-  aspect-ratio: 2 / 1;
   object-fit: cover;
   border-radius: 6px;
 }
 
-.grid-1x3 {
-  display: grid;
+/* Individual grid layouts */
+.image-grid.grid-2x2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.image-grid.grid-1x3 {
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
 }
 
-.grid-1x3 h2 {
-  grid-column: 1 / -1;
-  margin-bottom: 0.25rem;
+.image-grid.grid-single {
+  grid-template-columns: 1fr;
 }
 
-.grid-1x3 p {
-  grid-column: 1 / -1;
-  margin-bottom: 1rem;
-}
-
-.grid-1x3 img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.grid-responsive {
-  display: grid;
+.image-grid.grid-responsive {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
 }
 
-.grid-responsive h2 {
-  grid-column: 1 / -1;
-  margin-bottom: 0.25rem;
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .image-grid.grid-2x2,
+  .image-grid.grid-1x3 {
+    grid-template-columns: 1fr; /* stack columns on smaller screens */
+  }
 }
 
-.grid-responsive p {
-  grid-column: 1 / -1;
-  margin-bottom: 1rem;
-}
-
-.grid-responsive img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 6px;
-}
 
 
 /* ================= RELATED CARDS ================= */
