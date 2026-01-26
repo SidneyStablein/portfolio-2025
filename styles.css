@@ -439,9 +439,13 @@ text-align: left;
 }
 
 .info-card {
-  background: #f3f9ff;
   display: flex;
   flex-direction: column;
+
+  background-image: url("assets/images/project-footer-block-image.png");
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .info-card img {
