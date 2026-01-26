@@ -234,6 +234,8 @@ html, body {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px; /* small bottom padding */
 
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
 }
