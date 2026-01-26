@@ -395,7 +395,7 @@ text-align: left;
 
 .project-gallery {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.2fr 1.8fr;
   gap: 1.5rem;
   align-items: stretch;
 }
@@ -405,7 +405,7 @@ text-align: left;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem; /* slightly tighter */
 }
 
 .gallery-small img {
@@ -417,6 +417,7 @@ text-align: left;
 /* RIGHT SIDE — LARGE IMAGE */
 .gallery-large {
   display: flex;
+  max-height: 520px;
 }
 
 .gallery-large img {
