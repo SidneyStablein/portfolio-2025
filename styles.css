@@ -399,7 +399,7 @@ text-align: left;
 
 .project-gallery {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* large image takes more width */
+  grid-template-columns: 1fr 2fr; /* large image takes more width */
   gap: 1.5rem;
   align-items: start; /* keeps tops aligned */
 }
