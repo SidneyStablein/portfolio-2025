@@ -446,7 +446,7 @@ text-align: left;
 
 /* Section spacing and text */
 .image-section {
-  padding: 4rem 0;
+  padding: 3rem 0; /* same as previous galleries */
 }
 
 .image-section h2 {
@@ -460,61 +460,45 @@ text-align: left;
   color: #555;
 }
 
-/* General image grid */
+/* IMAGE GRID — keep individual sizing like old galleries */
 .image-grid {
   display: grid;
   gap: 1.5rem;
-  justify-content: start; /* keeps grid aligned left, not stretched */
 }
 
-.image-grid img {
-  width: 100%;
-  height: auto; /* keeps images proportional */
-  max-width: 320px; /* prevents images from being huge */
-  object-fit: cover; /* fills image area nicely */
-  border-radius: 6px;
-}
-
-/* Individual grid layouts */
+/* 2x2 small images grid */
 .image-grid.grid-2x2 {
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 240px; /* keeps squares similar to before */
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 240px; /* square-ish cells */
 }
 
+/* Single large image */
+.image-grid.grid-single {
+  grid-template-columns: 1fr;
+  max-width: 520px; /* roughly same as old large image */
+  grid-auto-rows: 520px;
+}
+
+/* 1x3 images row */
 .image-grid.grid-1x3 {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 220px;
 }
 
-.image-grid.grid-single {
-  grid-template-columns: 1fr;
-  max-width: 600px; /* constrain single image */
-}
-
+/* Responsive fluid grid */
 .image-grid.grid-responsive {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-auto-rows: 220px;
 }
 
-/* Make images cover their grid cells */
+/* Make all images cover their cells (no contain) */
 .image-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 6px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .image-grid.grid-2x2,
-  .image-grid.grid-1x3 {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 220px; /* maintain good aspect ratio on mobile */
-  }
-
-  .image-grid.grid-single {
-    max-width: 100%;
-  }
-}
 
 
 
