@@ -456,6 +456,13 @@ text-align: left;
   gap: 1.5rem;
 }
 
+.grid-2x2 h2 {
+  grid-column: 1 / -1;
+}
+
+.grid-2x2 p {
+  grid-column: 1 / -1;
+}
 
 .grid-2x2 img {
   width: 100%;
