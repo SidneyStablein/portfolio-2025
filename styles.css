@@ -451,9 +451,9 @@ text-align: left;
 
 .grid-2x2 img {
   width: 100%;
-  aspect-ratio: 1 / 1;  /* square images */
+  aspect-ratio: 1 / 2;  /* square images */
   object-fit: cover;
-  border-radius: 6px;   /* optional */
+  border-radius: 6px;
 }
 
 /* ================= RELATED CARDS ================= */
