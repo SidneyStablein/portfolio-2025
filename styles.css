@@ -452,7 +452,7 @@ text-align: left;
 .grid-2x2 img {
   width: 100%;
   aspect-ratio: 1 / 2;  /* square images */
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
 }
 
