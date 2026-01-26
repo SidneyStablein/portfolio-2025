@@ -437,7 +437,7 @@ text-align: left;
   gap: 3rem;
   padding: 6rem 0;
 }
-
+/*
 .info-card {
   display: flex;
   flex-direction: column;
@@ -447,14 +447,38 @@ text-align: left;
   background-position: center;
   background-repeat: no-repeat;
 }
+*/
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* controls card size */
+  aspect-ratio: 3 / 4;        /* adjust to match your background image */
+  padding: 1.25rem;
+
+  background-image: url("assets/images/project-footer-block-image.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* keeps content inside */
+  overflow: hidden;
+}
 
 .info-card img {
-  height: 280px;
-  object-fit: cover;
+  width: 100%;
+  max-height: 55%;        /* keeps it smaller than background */
+  object-fit: contain;   /* shows whole image */
+  margin-bottom: 1rem;
 }
 
 .info-card-text {
-  padding: 1.5rem;
+  padding: 0 0.5rem 0.5rem;
+  text-align: center;
+
+  max-height: 40%;
+  overflow: hidden;
 }
 
 /* ================= RESPONSIVE ================= */
