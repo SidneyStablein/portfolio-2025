@@ -443,6 +443,13 @@ text-align: left;
   object-fit: contain;
 }
 
+.project-gallery-fluid-2column {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 80%;
+}
+
 /* ================= RELATED CARDS ================= */
 
 .project-related {
