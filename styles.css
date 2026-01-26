@@ -446,8 +446,7 @@ text-align: left;
 .project-gallery-fluid-2column {
   display: grid;
   gap: 1.5rem;
-  justify-content: center;
-  width: 20%;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 /* ================= RELATED CARDS ================= */
