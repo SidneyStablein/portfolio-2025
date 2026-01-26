@@ -433,7 +433,7 @@ text-align: left;
 
 .project-gallery-fluid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(3000px, 1fr));
   gap: 1.5rem;
 }
 
