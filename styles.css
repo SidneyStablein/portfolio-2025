@@ -456,15 +456,6 @@ text-align: left;
   gap: 1.5rem;
 }
 
-.grid-2x2 h2 {
-  grid-column: 1 / -1;
-  margin-bottom: 0.25rem;
-}
-
-.grid-2x2 p {
-  grid-column: 1 / -1;
-  margin-bottom: 1rem;
-}
 
 .grid-2x2 img {
   width: 100%;
@@ -487,7 +478,6 @@ text-align: left;
 .grid-single p {
   grid-column: 1 / -1;
   margin-bottom: 1rem;
-  color: #555;
 }
 
 .grid-single img {
@@ -511,7 +501,6 @@ text-align: left;
 .grid-1x3 p {
   grid-column: 1 / -1;
   margin-bottom: 1rem;
-  color: #555;
 }
 
 .grid-1x3 img {
@@ -535,7 +524,6 @@ text-align: left;
 .grid-responsive p {
   grid-column: 1 / -1;
   margin-bottom: 1rem;
-  color: #555;
 }
 
 .grid-responsive img {
