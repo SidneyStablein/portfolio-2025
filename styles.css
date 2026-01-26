@@ -399,35 +399,36 @@ text-align: left;
 
 .project-gallery {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* small images take more width */
+  grid-template-columns: 2fr 1fr; /* large image takes more width */
   gap: 1.5rem;
-  align-items: start; /* prevent awkward vertical spacing */
+  align-items: start; /* keeps tops aligned */
 }
 
 /* LEFT SIDE — 4 SMALL IMAGES */
 .gallery-small {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 columns */
-  grid-auto-rows: 1fr; /* equal height for rows */
-  gap: 1rem; /* tighter spacing */
+  grid-auto-rows: 1fr;            /* equal row heights */
+  gap: 1rem;
 }
 
 .gallery-small img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* keeps images square */
-  object-fit: cover;   /* fills each square nicely */
+  aspect-ratio: 1 / 1; /* keep them square */
+  object-fit: cover;
 }
 
 /* RIGHT SIDE — LARGE IMAGE */
 .gallery-large {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
 .gallery-large img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* make large image square too */
+  max-height: 520px;  /* caps the height */
+  aspect-ratio: 1 / 1; /* keeps square */
   object-fit: cover;
 }
 
