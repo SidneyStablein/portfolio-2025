@@ -443,16 +443,17 @@ text-align: left;
   object-fit: contain;
 }
 
-.project-gallery-fluid-2column {
+.grid-2x2 {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
-.project-gallery-fluid-2column img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+.grid-2x2 img {
+  width: 100%;
+  aspect-ratio: 1 / 1;  /* square images */
+  object-fit: cover;
+  border-radius: 6px;   /* optional */
 }
 
 /* ================= RELATED CARDS ================= */
