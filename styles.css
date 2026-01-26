@@ -494,6 +494,15 @@ text-align: left;
   font-size: 0.9rem;
 }
 
+/*Image grids*/
+
+.image-grid {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 80%;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
