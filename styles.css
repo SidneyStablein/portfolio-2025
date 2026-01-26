@@ -494,26 +494,6 @@ text-align: left;
   font-size: 0.9rem;
 }
 
-/*Image grids*/
-.image-grids {
-    margin:0 auto;
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    max-width: 80%;
-    box-sizing: border-box;
-}
-
-.image-grid {
-    display: grid;
-    gap: 1.5rem;
-    justify-content: center;
-    width: 80%;
-}
-
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
