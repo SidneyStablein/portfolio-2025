@@ -446,17 +446,7 @@ text-align: left;
   gap: 3rem;
   padding: 6rem 0;
 }
-/*
-.info-card {
-  display: flex;
-  flex-direction: column;
 
-  background-image: url("assets/images/project-footer-block-image.png");
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-*/
 .info-card {
   display: flex;
   flex-direction: column;
@@ -523,6 +513,10 @@ text-align: left;
 /*footer*/
 footer {
   background: var(--medium);
-  margin: 0;
   text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer p {
+  margin: 0;
 }
