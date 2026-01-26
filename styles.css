@@ -481,6 +481,15 @@ text-align: left;
   overflow: hidden;
 }
 
+.info-card-text h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.info-card-text p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
