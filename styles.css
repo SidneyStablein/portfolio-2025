@@ -407,29 +407,28 @@ text-align: left;
 /* LEFT SIDE — 4 SMALL IMAGES */
 .gallery-small {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns */
-  grid-auto-rows: 1fr;            /* equal row heights */
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
   gap: 1rem;
 }
 
 .gallery-small img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* keep them square */
-  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; /* keeps them square and fills the cell */
 }
 
 /* RIGHT SIDE — LARGE IMAGE */
 .gallery-large {
-  display: flex;
-  align-items: start;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* makes the container square */
 }
 
 .gallery-large img {
   width: 100%;
-  max-height: 520px;  /* caps the height */
-  aspect-ratio: 1 / 1; /* keeps square */
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover; /* fills the square, no empty space */
 }
 
 .project-gallery-fluid {
