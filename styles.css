@@ -388,9 +388,10 @@ text-align: left;
   align-items: center;
 }
 
-.project-split img {
+.project-split img,
+.project-split video {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 520px;
   object-fit: cover;
 }
