@@ -395,6 +395,32 @@ text-align: left;
   object-fit: cover;
 }
 
+/* ================= TRIPLE SPLIT ================= */
+
+.project-triple-split {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.split-row {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.split-row:first-child {
+  align-items: flex-start;
+}
+
+.split-row img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
 /* ================= GALLERY ================= */
 
 .project-gallery {
