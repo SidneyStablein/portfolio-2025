@@ -391,9 +391,14 @@ text-align: left;
 .project-split img,
 .project-split video {
   width: 100%;
+  max-width: 100%;
   height: auto;
   max-height: 520px;
-  object-fit: cover;
+}
+
+.project-split video {
+  object-fit: contain;
+  display: block;
 }
 
 /* ================= TRIPLE SPLIT ================= */
