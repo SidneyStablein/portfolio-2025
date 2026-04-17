@@ -384,8 +384,9 @@ text-align: left;
 .project-split {
   display: grid;
   grid-template-columns: 3fr 2fr; /* image bigger, text smaller */
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .project-split img,
