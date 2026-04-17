@@ -383,7 +383,7 @@ text-align: left;
 
 .project-split {
   display: grid;
-  grid-template-columns: 3fr 2fr; /* image bigger, text smaller */
+  grid-template-columns: auto 2fr; /* video sized to content, text flexible */
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -396,6 +396,7 @@ text-align: left;
 }
 
 .project-split video {
+  width: auto;
   object-fit: contain;
   display: block;
   justify-self: center;
