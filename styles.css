@@ -17,8 +17,8 @@ html, body {
 }
 
 .page-wrapper {
-  padding-left: clamp(1.5rem, 6vw, 8vw);
-  padding-right: clamp(1.5rem, 6vw, 8vw);
+  padding-left: clamp(1rem, 4vw, 6vw);
+  padding-right: clamp(1rem, 4vw, 6vw);
 }
 /* ================= HEADER ================= */
 
@@ -584,7 +584,7 @@ text-align: left;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .info-card {
