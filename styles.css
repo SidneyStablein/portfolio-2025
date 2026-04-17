@@ -397,6 +397,7 @@ text-align: left;
 .project-split video {
   object-fit: contain;
   display: block;
+  justify-self: center;
 }
 
 /* ================= TRIPLE SPLIT ================= */
