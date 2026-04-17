@@ -145,8 +145,8 @@ html, body {
   position: sticky;
   top: 0;
   height: 80vh;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
