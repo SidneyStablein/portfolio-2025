@@ -382,8 +382,7 @@ text-align: left;
 }
 
 .project-split {
-  display: grid;
-  grid-template-columns: auto 2fr; /* video sized to content, text flexible */
+  display: flex;
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -395,11 +394,15 @@ text-align: left;
   max-height: 520px;
 }
 
+.project-split img {
+  width: 100%;
+  max-width: 100%;
+}
+
 .project-split video {
   width: auto;
   object-fit: contain;
   display: block;
-  justify-self: center;
 }
 
 /* ================= TRIPLE SPLIT ================= */
