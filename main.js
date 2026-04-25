@@ -129,78 +129,35 @@ slideshows.forEach((slideshow) => {
 
 /* ================= BEFORE/AFTER SLIDERS ================= */
 
-const sliders = [
-  {
-    slider: document.getElementById("slider1"),
-    handle: document.getElementById("handle1"),
-    afterMask: document.getElementById("afterMask1")
-  },
-  {
-    slider: document.getElementById("slider2"),
-    handle: document.getElementById("handle2"),
-    afterMask: document.getElementById("afterMask2")
-  }
-];
+const sliders = document.querySelectorAll(".before-after-slider");
 
-sliders.forEach(({ slider, handle, afterMask }) => {
-  if (!slider || !handle || !afterMask) return;
-
+sliders.forEach(slider => {
+  const range = slider.querySelector(".fade-slider");
+  const afterImage = slider.querySelector(".after-image");
   const labelBefore = slider.querySelector(".label.before");
   const labelAfter = slider.querySelector(".label.after");
 
-  let isDragging = false;
+  function update(value) {
+    const percent = value;
 
-  function updateSlider(x) {
-    const rect = slider.getBoundingClientRect();
-    let offsetX = x - rect.left;
+    // Fade logic
+    const opacity = 1 - (percent / 100);
+    afterImage.style.opacity = opacity;
 
-    // Clamp within bounds
-    offsetX = Math.max(0, Math.min(offsetX, rect.width));
-
-    const percent = (offsetX / rect.width) * 100;
-
-    // Move handle
-    handle.style.left = percent + "%";
-
-    // Reveal mask (THIS is what fixes the "moving image" issue)
-    afterMask.style.width = percent + "%";
-
-    // Fade labels
+    // Label fading (same idea as before)
     if (labelBefore) {
-      labelBefore.style.opacity = percent < 20 ? 0 : 1;
+      labelBefore.style.opacity = percent < 30 ? 0 : 1;
     }
 
     if (labelAfter) {
-      labelAfter.style.opacity = percent > 80 ? 0 : 1;
+      labelAfter.style.opacity = percent > 70 ? 0 : 1;
     }
   }
 
-  // ===== Mouse Events =====
-  handle.addEventListener("mousedown", () => {
-    isDragging = true;
-  });
+  // Init
+  update(range.value);
 
-  window.addEventListener("mouseup", () => {
-    isDragging = false;
-  });
-
-  window.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-    updateSlider(e.clientX);
-  });
-
-  // ===== Touch Events =====
-  handle.addEventListener("touchstart", () => {
-    isDragging = true;
-  });
-
-  window.addEventListener("touchend", () => {
-    isDragging = false;
-  });
-
-  window.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    updateSlider(e.touches[0].clientX);
+  range.addEventListener("input", (e) => {
+    update(e.target.value);
   });
 });
-

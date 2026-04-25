@@ -598,6 +598,7 @@ text-align: left;
 }
 
 /* ================= BEFORE/AFTER SLIDERS ================= */
+
 .before-after-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -613,14 +614,28 @@ text-align: left;
   user-select: none;
 }
 
+/* BASE IMAGES */
 .before-after-slider img {
   display: block;
   width: 100%;
   pointer-events: none;
 }
 
-/* LABELS */
-/* LABELS */
+/* TOP IMAGE (FADES IN/OUT) */
+.after-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+  z-index: 5;
+}
+
+/* ================= LABELS ================= */
+
 .label {
   position: absolute;
   top: 16px;
@@ -643,51 +658,41 @@ text-align: left;
   right: 16px;
 }
 
-/* AFTER MASK */
-.after-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  overflow: hidden;
-}
+/* ================= RANGE SLIDER ================= */
 
-.after-mask img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.fade-slider {
   position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* HANDLE */
-.handle {
-  position: absolute;
-  top: 0;
+  bottom: 14px;
   left: 50%;
-  height: 100%;
-  width: 2px;
-  background: white;
-  cursor: ew-resize;
   transform: translateX(-50%);
-  z-index: 10;
+  width: 65%;
+  z-index: 30;
+
+  appearance: none;
+  height: 4px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 2px;
+  outline: none;
 }
 
-/* CIRCLE KNOB */
-.handle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
+/* THUMB */
+.fade-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
   background: white;
-  border: 3px solid rgba(33, 109, 185, 0.8);
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: 2px solid #216DB9;
+}
+
+.fade-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #216DB9;
 }
 
 /* ================= RELATED CARDS ================= */
