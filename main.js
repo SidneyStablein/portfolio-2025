@@ -144,13 +144,13 @@ sliders.forEach(slider => {
     const opacity = 1 - (percent / 100);
     afterImage.style.opacity = opacity;
 
-    // Label fading (same idea as before)
+    // Label fading
     if (labelBefore) {
-      labelBefore.style.opacity = percent < 30 ? 0 : 1;
+      labelBefore.style.opacity = percent > 80 ? 0 : 1;
     }
 
     if (labelAfter) {
-      labelAfter.style.opacity = percent > 70 ? 0 : 1;
+      labelAfter.style.opacity = percent < 20 ? 0 : 1;
     }
   }
 
