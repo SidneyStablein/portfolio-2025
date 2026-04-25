@@ -606,11 +606,12 @@ text-align: left;
   margin-top: 2rem;
 }
 
+/* MAIN SLIDER CARD */
 .before-after-slider {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto; 
+  max-width: 500px;   /* controls overall size */
+  margin: 0 auto;
   overflow: hidden;
   border-radius: 6px;
   user-select: none;
@@ -620,17 +621,18 @@ text-align: left;
 .before-after-slider img {
   display: block;
   width: 100%;
+  height: auto;       /* 🔥 keeps native aspect ratio */
   pointer-events: none;
 }
 
-/* TOP IMAGE (FADES IN/OUT) */
+/* TOP IMAGE (FADES) */
 .after-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;        
-  object-fit: contain;
+  height: auto;        /* 🔥 prevents cropping distortion */
+  object-fit: contain; /* safe fallback */
   opacity: 1;
   transition: opacity 0.25s ease;
   z-index: 5;
@@ -640,9 +642,9 @@ text-align: left;
 
 .label {
   position: absolute;
-  bottom: 8px; 
+  bottom: 14px;  /* align with slider */
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   background: rgba(0,0,0,0.4);
@@ -652,31 +654,34 @@ text-align: left;
   z-index: 20;
 }
 
+/* left label (Before) */
 .label.before {
-  left: calc(50% - 120px);
-  transform: translateX(-100%);
+  left: calc(50% - 90px);   /* aligns with slider */
+  transform: translateX(-120%);
 }
 
+/* right label (After) */
 .label.after {
-  right: calc(50% - 120px);
-  transform: translateX(100%);
+  right: calc(50% - 90px);
+  transform: translateX(120%);
 }
 
-/* ================= RANGE SLIDER ================= */
+/* ================= SLIDER ================= */
 
 .fade-slider {
   position: absolute;
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: 35%;
-  z-index: 30;
+  width: 180px;   /* 🔥 shorter slider */
+  max-width: 180px;
 
   appearance: none;
   height: 4px;
-  background: rgba(181, 181, 181, 0.6);
+  background: rgba(255,255,255,0.6);
   border-radius: 2px;
   outline: none;
+  z-index: 30;
 }
 
 /* THUMB */

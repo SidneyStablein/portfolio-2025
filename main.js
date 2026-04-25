@@ -140,24 +140,59 @@ sliders.forEach(slider => {
   function update(value) {
     const percent = value;
 
-    // Fade logic
+    // Fade (top image disappears as you go right)
     const opacity = 1 - (percent / 100);
     afterImage.style.opacity = opacity;
 
-    // Label fading
+    // Label fade
     if (labelBefore) {
-      labelBefore.style.opacity = percent > 80 ? 0 : 1;
+      labelBefore.style.opacity = percent > 70 ? 0 : 1;
     }
 
     if (labelAfter) {
-      labelAfter.style.opacity = percent < 20 ? 0 : 1;
+      labelAfter.style.opacity = percent < 30 ? 0 : 1;
     }
+  }
+
+  // SNAP LOGIC
+  function snap(value) {
+    if (value < 25) return 0;
+    if (value < 75) return 50;
+    return 100;
+  }
+
+  // Animate snapping
+  function animateTo(target) {
+    const start = parseInt(range.value);
+    const duration = 150;
+    const startTime = performance.now();
+
+    function animate(time) {
+      const progress = Math.min((time - startTime) / duration, 1);
+      const value = start + (target - start) * progress;
+
+      range.value = value;
+      update(value);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    }
+
+    requestAnimationFrame(animate);
   }
 
   // Init
   update(range.value);
 
+  // Live drag
   range.addEventListener("input", (e) => {
     update(e.target.value);
+  });
+
+  // Snap on release
+  range.addEventListener("change", (e) => {
+    const snapped = snap(parseInt(e.target.value));
+    animateTo(snapped);
   });
 });
