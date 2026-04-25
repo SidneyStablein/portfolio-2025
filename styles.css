@@ -375,6 +375,17 @@ text-align: left;
   margin-bottom: 1rem;
 }
 
+.project-hero-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.project-hero-description {
+  flex: 1;
+  padding: 2rem 0;
+}
+
 /* ================= IMAGE + TEXT ================= */
 .project-split,
 .project-gallery-section {
