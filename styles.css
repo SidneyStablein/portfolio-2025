@@ -598,115 +598,95 @@ text-align: left;
 }
 
 /* ================= BEFORE/AFTER SLIDERS ================= */
-
-.before-after-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-/* MAIN SLIDER CARD */
 .before-after-slider {
   position: relative;
   width: 100%;
-  max-width: 500px;   /* controls overall size */
+  max-width: 600px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 6px;
-  user-select: none;
 }
 
 /* BASE IMAGES */
 .before-after-slider img {
   display: block;
   width: 100%;
-  height: auto;       /* 🔥 keeps native aspect ratio */
-  pointer-events: none;
+  height: auto;
 }
 
-/* TOP IMAGE (FADES) */
+/* TOP IMAGE */
 .after-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;        /* 🔥 prevents cropping distortion */
-  object-fit: contain; /* safe fallback */
+  height: auto;
   opacity: 1;
   transition: opacity 0.25s ease;
-  z-index: 5;
+}
+
+/* ================= CONTROLS BAR ================= */
+
+.slider-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
 /* ================= LABELS ================= */
 
 .label {
-  position: absolute;
-  bottom: 14px;
   font-size: 0.7rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 
   color: white;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 5px 10px;
-  border-radius: 4px;
-
-  /* 🔥 always visible */
-  opacity: 0.45;
-
-
-  transform: translateY(50%);
+  opacity: 0.5; /* default state */
 
   cursor: pointer;
   user-select: none;
 
-  /* shadow for separation */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  /* IMPORTANT: removed hover/enlarge effects */
+  transition: opacity 0.2s ease;
 }
 
-/* left label */
-.label.before {
-  left: calc(50% - 110px);
-}
-
-/* right label */
-.label.after {
-  right: calc(50% - 110px);
-}
-
-/* ================= ACTIVE STATE ================= */
-
+/* active state only changes opacity */
 .label.active {
   opacity: 1;
-  transform: translateY(50%) scale(1.05);
 }
 
 /* ================= SLIDER ================= */
 
 .fade-slider {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 180px;
 
   appearance: none;
   height: 4px;
-  background: rgba(255,255,255,0.6);
   border-radius: 2px;
-  outline: none;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  background: rgba(255,255,255,0.6);
+  outline: none;
 }
 
-/* THUMB */
+/* thumb */
 .fade-slider::-webkit-slider-thumb {
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: white;
   border-radius: 50%;
   cursor: pointer;
@@ -714,8 +694,8 @@ text-align: left;
 }
 
 .fade-slider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: white;
   border-radius: 50%;
   cursor: pointer;
