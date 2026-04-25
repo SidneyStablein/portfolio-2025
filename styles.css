@@ -598,10 +598,18 @@ text-align: left;
 }
 
 /* ================= BEFORE/AFTER SLIDERS ================= */
+
+.before-after-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 .before-after-slider {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 6px;
@@ -701,6 +709,7 @@ text-align: left;
   cursor: pointer;
   border: 2px solid #216DB9;
 }
+
 
 /* ================= RELATED CARDS ================= */
 
