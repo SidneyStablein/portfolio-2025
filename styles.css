@@ -609,7 +609,7 @@ text-align: left;
 .before-after-slider {
   position: relative;
   width: 100%;
-  max-height: 50vh;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 6px;
   user-select: none;
