@@ -156,29 +156,33 @@ beforeAfterSliders.forEach((slider) => {
 
     const percentage = (x / rect.width) * 100;
 
+    // Update wrapper width and handle position
     wrapper.style.width = percentage + "%";
     handle.style.left = percentage + "%";
   }
 
-  handle.addEventListener("mousedown", () => {
+  // Mouse events
+  handle.addEventListener("mousedown", (e) => {
     isActive = true;
-  });
-
-  slider.addEventListener("touchstart", (e) => {
-    if (e.target === handle || handle.contains(e.target)) {
-      isActive = true;
-    }
+    e.preventDefault();
   });
 
   document.addEventListener("mouseup", () => {
     isActive = false;
   });
 
+  document.addEventListener("mousemove", updateSlider);
+
+  // Touch events
+  handle.addEventListener("touchstart", (e) => {
+    isActive = true;
+    e.preventDefault();
+  });
+
   document.addEventListener("touchend", () => {
     isActive = false;
   });
 
-  document.addEventListener("mousemove", updateSlider);
-  document.addEventListener("touchmove", updateSlider);
+  document.addEventListener("touchmove", updateSlider, { passive: false });
 });
 
