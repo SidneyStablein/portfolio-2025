@@ -126,3 +126,53 @@ slideshows.forEach((slideshow) => {
   // Initialize first slide
   showSlide();
 });
+
+/* ================= BEFORE/AFTER SLIDERS ================= */
+
+const beforeAfterSliders = document.querySelectorAll(".before-after-slider");
+
+beforeAfterSliders.forEach((slider) => {
+  const wrapper = slider.querySelector(".before-after-img-wrapper");
+  const handle = slider.querySelector(".before-after-slider-handle");
+  let isActive = false;
+
+  function updateSlider(e) {
+    if (!isActive) return;
+
+    const rect = slider.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+
+    // Handle touch events
+    if (e.touches) {
+      x = e.touches[0].clientX - rect.left;
+    }
+
+    // Clamp x between 0 and slider width
+    x = Math.max(0, Math.min(x, rect.width));
+
+    const percentage = (x / rect.width) * 100;
+
+    wrapper.style.width = percentage + "%";
+    handle.style.left = percentage + "%";
+  }
+
+  slider.addEventListener("mousedown", () => {
+    isActive = true;
+  });
+
+  slider.addEventListener("touchstart", () => {
+    isActive = true;
+  });
+
+  document.addEventListener("mouseup", () => {
+    isActive = false;
+  });
+
+  document.addEventListener("touchend", () => {
+    isActive = false;
+  });
+
+  document.addEventListener("mousemove", updateSlider);
+  document.addEventListener("touchmove", updateSlider);
+});
+
