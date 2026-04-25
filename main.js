@@ -138,61 +138,46 @@ sliders.forEach(slider => {
   const labelAfter = slider.querySelector(".label.after");
 
   function update(value) {
-    const percent = value;
+    const percent = parseFloat(value);
 
-    // Fade (top image disappears as you go right)
+    // fade behavior (same as before)
     const opacity = 1 - (percent / 100);
     afterImage.style.opacity = opacity;
 
-    // Label fade
+    // label "active direction" logic
     if (labelBefore) {
-      labelBefore.style.opacity = percent > 70 ? 0 : 1;
+      labelBefore.classList.toggle("active", percent < 40);
     }
 
     if (labelAfter) {
-      labelAfter.style.opacity = percent < 30 ? 0 : 1;
+      labelAfter.classList.toggle("active", percent > 60);
     }
   }
 
-  // SNAP LOGIC
-  function snap(value) {
-    if (value < 25) return 0;
-    if (value < 75) return 50;
-    return 100;
+  // smooth snap helper (optional but keeps UX consistent)
+  function setSlider(value) {
+    range.value = value;
+    update(value);
   }
 
-  // Animate snapping
-  function animateTo(target) {
-    const start = parseInt(range.value);
-    const duration = 150;
-    const startTime = performance.now();
-
-    function animate(time) {
-      const progress = Math.min((time - startTime) / duration, 1);
-      const value = start + (target - start) * progress;
-
-      range.value = value;
-      update(value);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  // Init
+  // init
   update(range.value);
 
-  // Live drag
-  range.addEventListener("input", (e) => {
+  // slider drag
+  range.addEventListener("input", e => {
     update(e.target.value);
   });
 
-  // Snap on release
-  range.addEventListener("change", (e) => {
-    const snapped = snap(parseInt(e.target.value));
-    animateTo(snapped);
-  });
+  // label clicks → act like buttons
+  if (labelBefore) {
+    labelBefore.addEventListener("click", () => {
+      setSlider(0); // full "before direction"
+    });
+  }
+
+  if (labelAfter) {
+    labelAfter.addEventListener("click", () => {
+      setSlider(100); // full "after direction"
+    });
+  }
 });

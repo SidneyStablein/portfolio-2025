@@ -642,28 +642,46 @@ text-align: left;
 
 .label {
   position: absolute;
-  bottom: 14px;  /* align with slider */
-  color: white;
+  bottom: 14px;
   font-size: 0.7rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: rgba(0,0,0,0.4);
-  padding: 4px 8px;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 5px 10px;
   border-radius: 4px;
-  transition: opacity 0.3s ease;
-  z-index: 20;
+
+  /* 🔥 always visible */
+  opacity: 0.45;
+
+
+  transform: translateY(50%);
+
+  cursor: pointer;
+  user-select: none;
+
+  /* shadow for separation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* left label (Before) */
+/* left label */
 .label.before {
-  left: calc(50% - 90px);   /* aligns with slider */
-  transform: translateX(-120%);
+  left: calc(50% - 110px);
 }
 
-/* right label (After) */
+/* right label */
 .label.after {
-  right: calc(50% - 90px);
-  transform: translateX(120%);
+  right: calc(50% - 110px);
+}
+
+/* ================= ACTIVE STATE ================= */
+
+.label.active {
+  opacity: 1;
+  transform: translateY(50%) scale(1.05);
 }
 
 /* ================= SLIDER ================= */
@@ -673,15 +691,15 @@ text-align: left;
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: 180px;   /* 🔥 shorter slider */
-  max-width: 180px;
+  width: 180px;
 
   appearance: none;
   height: 4px;
   background: rgba(255,255,255,0.6);
   border-radius: 2px;
   outline: none;
-  z-index: 30;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 /* THUMB */
