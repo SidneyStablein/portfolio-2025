@@ -4,6 +4,7 @@
   --medium: #D4EAFF;
   --button-blue: #216DB9;
   --bg: #E0EFFF;
+  --section: #EBF5FF;
 }
 
 * {
@@ -601,6 +602,7 @@ text-align: left;
 
 .project-details {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .project-details div {
@@ -617,6 +619,11 @@ text-align: left;
   margin: 0;
   line-height: 1.6;
   color: #555;
+}
+
+.project-page h2,
+.project-page h3 {
+  text-align: center;
 }
 
 /* ================= BEFORE/AFTER SLIDERS ================= */
@@ -748,7 +755,7 @@ text-align: left;
   justify-content: center;
 
   /* controls card size */
-  aspect-ratio: 3 / 4;        /* adjust to match your background image */
+  aspect-ratio: 3 / 4;        
   padding: 1.25rem;
 
   background-image: url("assets/images/project-footer-block-image.png");
@@ -762,8 +769,8 @@ text-align: left;
 
 .info-card img {
   width: 100%;
-  max-height: 55%;        /* keeps it smaller than background */
-  object-fit: contain;   /* shows whole image */
+  max-height: 55%;        
+  object-fit: contain;   
   margin-bottom: 1rem;
 }
 
@@ -857,6 +864,11 @@ text-align: left;
 
 .dot:hover {
   background-color: #717171;
+}
+
+/* ================= Section Background ================= */
+.light-blue-bg {
+  background-color: var(--section);
 }
 
 /* ================= RESPONSIVE ================= */
