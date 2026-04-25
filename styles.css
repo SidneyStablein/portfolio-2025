@@ -379,11 +379,11 @@ text-align: left;
   display: flex;
   gap: 2rem;
   align-items: center;
+  min-height: 60vh;
 }
 
 .project-hero-description {
   flex: 1;
-  padding: 2rem 0;
 }
 
 /* ================= IMAGE + TEXT ================= */
