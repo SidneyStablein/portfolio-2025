@@ -140,11 +140,10 @@ sliders.forEach(slider => {
   function update(value) {
     const percent = parseFloat(value);
 
-    // fade behavior (same as before)
-    const opacity = 1 - (percent / 100);
-    afterImage.style.opacity = opacity;
+    // fade top image ONLY (never whole container)
+    afterImage.style.opacity = 1 - (percent / 100);
 
-    // label "active direction" logic
+    // label active states
     if (labelBefore) {
       labelBefore.classList.toggle("active", percent < 40);
     }
@@ -154,8 +153,7 @@ sliders.forEach(slider => {
     }
   }
 
-  // smooth snap helper (optional but keeps UX consistent)
-  function setSlider(value) {
+  function set(value) {
     range.value = value;
     update(value);
   }
@@ -163,21 +161,17 @@ sliders.forEach(slider => {
   // init
   update(range.value);
 
-  // slider drag
+  // slider interaction
   range.addEventListener("input", e => {
     update(e.target.value);
   });
 
-  // label clicks → act like buttons
+  // label clicks
   if (labelBefore) {
-    labelBefore.addEventListener("click", () => {
-      setSlider(0); // full "before direction"
-    });
+    labelBefore.addEventListener("click", () => set(0));
   }
 
   if (labelAfter) {
-    labelAfter.addEventListener("click", () => {
-      setSlider(100); // full "after direction"
-    });
+    labelAfter.addEventListener("click", () => set(100));
   }
 });
