@@ -369,6 +369,9 @@ text-align: left;
 
 .project-hero-meta {
   padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-hero-meta h1 {
@@ -378,12 +381,15 @@ text-align: left;
 .project-hero-content {
   display: flex;
   gap: 2rem;
-  align-items: center;
-  min-height: 60vh;
+  align-items: stretch;
 }
 
 .project-hero-description {
   flex: 1;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* ================= IMAGE + TEXT ================= */
