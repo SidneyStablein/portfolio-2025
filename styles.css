@@ -499,8 +499,7 @@ text-align: left;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .project-gallery-fluid img {
@@ -587,8 +586,7 @@ text-align: left;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .image-section {
