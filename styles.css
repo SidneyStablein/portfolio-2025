@@ -378,7 +378,7 @@ text-align: left;
 .project-hero-content {
   display: flex;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .project-hero-description {
