@@ -636,13 +636,17 @@ text-align: left;
 
 .before-after-slider-handle {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  width: 4px;
-  height: 100%;
+  width: 50px;
+  height: 50px;
   background-color: white;
-  transform: translateX(-50%);
+  border: 3px solid rgba(33, 109, 185, 0.8);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
+  cursor: col-resize;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .before-after-slider-handle::before,
@@ -650,22 +654,18 @@ text-align: left;
   content: '';
   position: absolute;
   top: 50%;
-  width: 0;
-  height: 0;
-  border-style: solid;
+  width: 2px;
+  height: 20px;
+  background-color: rgba(33, 109, 185, 0.8);
   transform: translateY(-50%);
 }
 
 .before-after-slider-handle::before {
-  left: -12px;
-  border-width: 8px 12px 8px 0;
-  border-color: transparent white transparent transparent;
+  left: 12px;
 }
 
 .before-after-slider-handle::after {
-  right: -12px;
-  border-width: 8px 0 8px 12px;
-  border-color: transparent transparent transparent white;
+  right: 12px;
 }
 
 /* ================= RELATED CARDS ================= */

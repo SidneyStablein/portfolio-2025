@@ -136,6 +136,10 @@ beforeAfterSliders.forEach((slider) => {
   const handle = slider.querySelector(".before-after-slider-handle");
   let isActive = false;
 
+  // Initialize wrapper to 50%
+  wrapper.style.width = "50%";
+  handle.style.left = "50%";
+
   function updateSlider(e) {
     if (!isActive) return;
 
@@ -156,12 +160,14 @@ beforeAfterSliders.forEach((slider) => {
     handle.style.left = percentage + "%";
   }
 
-  slider.addEventListener("mousedown", () => {
+  handle.addEventListener("mousedown", () => {
     isActive = true;
   });
 
-  slider.addEventListener("touchstart", () => {
-    isActive = true;
+  slider.addEventListener("touchstart", (e) => {
+    if (e.target === handle || handle.contains(e.target)) {
+      isActive = true;
+    }
   });
 
   document.addEventListener("mouseup", () => {
