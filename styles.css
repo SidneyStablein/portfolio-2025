@@ -403,6 +403,10 @@ text-align: left;
 }
 
 .project-gallery-section {
+  padding: 3rem 0;
+}
+
+.light-blue-bg {
   background: var(--light);
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -609,7 +613,7 @@ text-align: left;
 .project-details {
   margin-bottom: 2rem;
   text-align: center;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
