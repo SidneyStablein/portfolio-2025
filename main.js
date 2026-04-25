@@ -129,60 +129,54 @@ slideshows.forEach((slideshow) => {
 
 /* ================= BEFORE/AFTER SLIDERS ================= */
 
-const beforeAfterSliders = document.querySelectorAll(".before-after-slider");
+const sliders = [
+  { slider: document.getElementById("slider1"), handle: document.getElementById("handle1"), afterMask: document.getElementById("afterMask1") },
+  { slider: document.getElementById("slider2"), handle: document.getElementById("handle2"), afterMask: document.getElementById("afterMask2") }
+];
 
-beforeAfterSliders.forEach((slider) => {
-  const wrapper = slider.querySelector(".before-after-img-wrapper");
-  const handle = slider.querySelector(".before-after-slider-handle");
-  let isActive = false;
+sliders.forEach(({ slider, handle, afterMask }) => {
+  if (!slider || !handle || !afterMask) return;
 
-  // Initialize wrapper to 50%
-  wrapper.style.width = "50%";
-  handle.style.left = "50%";
+  let isDragging = false;
 
-  function updateSlider(e) {
-    if (!isActive) return;
-
+  function updateSlider(x) {
     const rect = slider.getBoundingClientRect();
-    let x = e.clientX - rect.left;
+    let offsetX = x - rect.left;
 
-    // Handle touch events
-    if (e.touches) {
-      x = e.touches[0].clientX - rect.left;
-    }
+    offsetX = Math.max(0, Math.min(offsetX, rect.width));
 
-    // Clamp x between 0 and slider width
-    x = Math.max(0, Math.min(x, rect.width));
+    const percent = (offsetX / rect.width) * 100;
 
-    const percentage = (x / rect.width) * 100;
-
-    // Update wrapper width and handle position
-    wrapper.style.width = percentage + "%";
-    handle.style.left = percentage + "%";
+    handle.style.left = percent + "%";
+    afterMask.style.width = percent + "%";
   }
 
   // Mouse events
-  handle.addEventListener("mousedown", (e) => {
-    isActive = true;
-    e.preventDefault();
+  handle.addEventListener("mousedown", () => {
+    isDragging = true;
   });
 
-  document.addEventListener("mouseup", () => {
-    isActive = false;
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
   });
 
-  document.addEventListener("mousemove", updateSlider);
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    updateSlider(e.clientX);
+  });
 
   // Touch events
-  handle.addEventListener("touchstart", (e) => {
-    isActive = true;
-    e.preventDefault();
+  handle.addEventListener("touchstart", () => {
+    isDragging = true;
   });
 
-  document.addEventListener("touchend", () => {
-    isActive = false;
+  window.addEventListener("touchend", () => {
+    isDragging = false;
   });
 
-  document.addEventListener("touchmove", updateSlider, { passive: false });
+  window.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    updateSlider(e.touches[0].clientX);
+  });
 });
 

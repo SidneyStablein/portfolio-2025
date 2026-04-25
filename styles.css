@@ -610,69 +610,57 @@ text-align: left;
   width: 100%;
   overflow: hidden;
   border-radius: 6px;
-  cursor: col-resize;
-  aspect-ratio: 16 / 9;
+  user-select: none;
 }
 
-.before-after-slider .before-after-img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.before-after-slider img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  pointer-events: none;
 }
 
-.before-after-img-wrapper {
+/* AFTER MASK */
+.after-mask {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
   height: 100%;
+  width: 50%;
   overflow: hidden;
 }
 
-.before-after-img-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.after-mask img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.before-after-slider-handle {
+/* HANDLE */
+.handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background: white;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* CIRCLE KNOB */
+.handle::after {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 50px;
   height: 50px;
-  background-color: white;
+  background: white;
   border: 3px solid rgba(33, 109, 185, 0.8);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
-  cursor: col-resize;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.before-after-slider-handle::before,
-.before-after-slider-handle::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 2px;
-  height: 20px;
-  background-color: rgba(33, 109, 185, 0.8);
-  transform: translateY(-50%);
-}
-
-.before-after-slider-handle::before {
-  left: 12px;
-}
-
-.before-after-slider-handle::after {
-  right: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 /* ================= RELATED CARDS ================= */
