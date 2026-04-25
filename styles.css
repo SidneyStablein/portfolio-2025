@@ -619,6 +619,30 @@ text-align: left;
   pointer-events: none;
 }
 
+/* LABELS */
+/* LABELS */
+.label {
+  position: absolute;
+  top: 16px;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+.label.before {
+  left: 16px;
+}
+
+.label.after {
+  right: 16px;
+}
+
 /* AFTER MASK */
 .after-mask {
   position: absolute;
@@ -633,6 +657,9 @@ text-align: left;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* HANDLE */

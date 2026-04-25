@@ -130,12 +130,23 @@ slideshows.forEach((slideshow) => {
 /* ================= BEFORE/AFTER SLIDERS ================= */
 
 const sliders = [
-  { slider: document.getElementById("slider1"), handle: document.getElementById("handle1"), afterMask: document.getElementById("afterMask1") },
-  { slider: document.getElementById("slider2"), handle: document.getElementById("handle2"), afterMask: document.getElementById("afterMask2") }
+  {
+    slider: document.getElementById("slider1"),
+    handle: document.getElementById("handle1"),
+    afterMask: document.getElementById("afterMask1")
+  },
+  {
+    slider: document.getElementById("slider2"),
+    handle: document.getElementById("handle2"),
+    afterMask: document.getElementById("afterMask2")
+  }
 ];
 
 sliders.forEach(({ slider, handle, afterMask }) => {
   if (!slider || !handle || !afterMask) return;
+
+  const labelBefore = slider.querySelector(".label.before");
+  const labelAfter = slider.querySelector(".label.after");
 
   let isDragging = false;
 
@@ -143,15 +154,28 @@ sliders.forEach(({ slider, handle, afterMask }) => {
     const rect = slider.getBoundingClientRect();
     let offsetX = x - rect.left;
 
+    // Clamp within bounds
     offsetX = Math.max(0, Math.min(offsetX, rect.width));
 
     const percent = (offsetX / rect.width) * 100;
 
+    // Move handle
     handle.style.left = percent + "%";
+
+    // Reveal mask (THIS is what fixes the "moving image" issue)
     afterMask.style.width = percent + "%";
+
+    // Fade labels
+    if (labelBefore) {
+      labelBefore.style.opacity = percent < 20 ? 0 : 1;
+    }
+
+    if (labelAfter) {
+      labelAfter.style.opacity = percent > 80 ? 0 : 1;
+    }
   }
 
-  // Mouse events
+  // ===== Mouse Events =====
   handle.addEventListener("mousedown", () => {
     isDragging = true;
   });
@@ -165,7 +189,7 @@ sliders.forEach(({ slider, handle, afterMask }) => {
     updateSlider(e.clientX);
   });
 
-  // Touch events
+  // ===== Touch Events =====
   handle.addEventListener("touchstart", () => {
     isDragging = true;
   });
