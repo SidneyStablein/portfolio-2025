@@ -408,8 +408,8 @@ text-align: left;
 
 .light-blue-bg {
   background: var(--light);
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  margin-left: -clamp(1rem, 4vw, 6vw);
+  margin-right: -clamp(1rem, 4vw, 6vw);
   padding-left: clamp(1rem, 4vw, 6vw);
   padding-right: clamp(1rem, 4vw, 6vw);
   padding-top: 4rem;
