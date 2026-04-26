@@ -15,6 +15,7 @@ html, body {
   margin: 0;
   font-family: sans-serif;
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 .page-wrapper {
@@ -406,15 +407,7 @@ text-align: left;
   padding: 4rem clamp(1rem, 4vw, 6vw);
 }
 
-.light-blue-bg {
-  background: var(--light);
-  margin-left: -clamp(1rem, 4vw, 6vw);
-  margin-right: -clamp(1rem, 4vw, 6vw);
-  padding-left: clamp(1rem, 4vw, 6vw);
-  padding-right: clamp(1rem, 4vw, 6vw);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+
 
 .project-split img,
 .project-split video {
@@ -893,9 +886,17 @@ text-align: left;
 
 /* ================= Section Background ================= */
 .light-blue-bg {
-  background-color: var(--section);
-}
+  background: var(--section);
 
+  margin-left: calc(-1 * clamp(1rem, 4vw, 6vw));
+  margin-right: calc(-1 * clamp(1rem, 4vw, 6vw));
+
+  padding-left: clamp(1rem, 4vw, 6vw);
+  padding-right: clamp(1rem, 4vw, 6vw);
+
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
