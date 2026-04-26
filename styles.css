@@ -408,7 +408,6 @@ text-align: left;
 
 .light-blue-bg {
   background: var(--light);
-  width: calc(100% + 2 * clamp(1rem, 4vw, 6vw));
   margin-left: -clamp(1rem, 4vw, 6vw);
   margin-right: -clamp(1rem, 4vw, 6vw);
   padding-left: clamp(1rem, 4vw, 6vw);
