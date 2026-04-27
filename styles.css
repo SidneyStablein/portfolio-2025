@@ -384,6 +384,8 @@ text-align: left;
   display: flex;
   gap: 2rem;
   align-items: stretch;
+  padding-left: clamp(1rem, 4vw, 6vw);
+  padding-right: clamp(1rem, 4vw, 6vw);
 }
 
 .project-hero-description {
@@ -395,6 +397,7 @@ text-align: left;
 }
 
 /* ================= PAGE SPACING ================= */
+
 .section-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -410,11 +413,13 @@ text-align: left;
 
 /* ================= IMAGE + TEXT ================= */
 .project-split {
-  padding: 4rem clamp(1rem, 4vw, 6vw);
   display: flex;
   gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: nowrap; /* prevent stacking */
 }
 
 
@@ -909,8 +914,9 @@ text-align: left;
 
 @media (max-width: 900px) {
   .project-split {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
+}
 
   .project-gallery {
     grid-template-columns: 1fr;
