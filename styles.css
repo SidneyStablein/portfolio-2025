@@ -394,6 +394,20 @@ text-align: left;
   justify-content: center;
 }
 
+/* ================= PAGE SPACING ================= */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: clamp(1rem, 4vw, 6vw);
+  padding-right: clamp(1rem, 4vw, 6vw);
+}
+
+.project-gallery-section,
+.image-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 /* ================= IMAGE + TEXT ================= */
 .project-split {
   padding: 4rem clamp(1rem, 4vw, 6vw);
@@ -403,9 +417,7 @@ text-align: left;
   justify-content: center;
 }
 
-.project-gallery-section {
-  padding: 4rem clamp(1rem, 4vw, 6vw);
-}
+
 
 
 
@@ -580,10 +592,6 @@ text-align: left;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   padding: 0;
-}
-
-.image-section {
-  padding: 4rem clamp(1rem, 4vw, 6vw); /* same as previous galleries */
 }
 
 .image-section h2 {
