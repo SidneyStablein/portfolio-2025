@@ -896,17 +896,18 @@ text-align: left;
 }
 
 .dots-container {
-  text-align: center;
-  padding: 1rem 0;
-  background: transparent;
-  background-color: transparent;
+  background: none;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
 }
 
 .dot {
   height: 7px;
   width: 7px;
   margin: 0 5px;
-  background-color: var(--button-blue 0.5);
+  background-color: var(--button-blue 0.7);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
