@@ -43,7 +43,10 @@ html, body {
 
 /* Sticky version (project pages) */
 .site-header.sticky {
-  position: sticky;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
   transform: translateY(0);
 }
 
@@ -946,7 +949,7 @@ text-align: left;
 
 /*footer*/
 footer {
-  background: var(--medium);
+  background: var(--medium, #e31616);
   text-align: center;
   padding: 1.5rem 0;
 }
