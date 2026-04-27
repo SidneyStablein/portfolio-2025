@@ -912,6 +912,63 @@ text-align: left;
   background-color: #717171;
 }
 
+/* ================= SMALL SLIDESHOW ================= */
+
+.slideshow-container.small {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* makes images visually smaller without breaking functionality */
+.slideshow-container.small .slide img {
+  max-height: 320px;
+  object-fit: cover;
+}
+
+/* controls scale down */
+.slideshow-container.small .slide-nav {
+  font-size: 1.2rem;
+  padding: 0.6rem 0.9rem;
+}
+
+.slideshow-container.small .dots-container {
+  padding: 1rem 0;
+}
+
+/* ================= SLIDESHOW SPLIT SECTION ================= */
+
+.slideshow-split {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.slideshow-split .text-side {
+  flex: 1;
+}
+
+.slideshow-split .media-side {
+  flex: 1;
+}
+
+/* smaller slideshow inside split */
+.slideshow-split .slideshow-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.slideshow-split .slide img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .slideshow-split {
+    flex-direction: column;
+  }
+}
+
 /* ================= Section Background ================= */
 .light-blue-bg {
   background: var(--section);
