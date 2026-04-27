@@ -380,10 +380,6 @@ text-align: left;
   margin-bottom: 1rem;
 }
 
-.project-hero {
-  padding-top: 6rem;
-}
-
 .project-hero-content {
   display: flex;
   gap: 2rem;
@@ -401,6 +397,10 @@ text-align: left;
 }
 
 /* ================= PAGE SPACING ================= */
+
+.project-page .project-hero {
+  padding-top: 8rem;
+}
 
 .section-inner {
   max-width: 1200px;
