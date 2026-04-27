@@ -865,7 +865,7 @@ text-align: left;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--bg 0.4);
+ background: rgba(214, 234, 255, 0.35);
   color: var(--button-blue);
   border-radius: 8px;
   border: 0px solid transparent;
@@ -877,9 +877,8 @@ text-align: left;
 }
 
 .slide-nav:hover {
-  background: var(--bg);
-  color: var(--button-blue);
-  opacity: 0.8;
+  background: rgba(214, 234, 255, 0.9);
+  opacity: 1;
 }
 
 .slide-nav:focus-visible {
@@ -896,8 +895,8 @@ text-align: left;
 }
 
 .dots-container {
-  background: none;
-  padding: 0.5rem 0;
+  background: transparent;
+  padding: 0.4rem 0;
   display: flex;
   justify-content: center;
   gap: 3px;
@@ -907,7 +906,7 @@ text-align: left;
   height: 7px;
   width: 7px;
   margin: 0 5px;
-  background-color: var(--button-blue 0.7);
+  background-color: rgba(33, 109, 185, 0.35);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
