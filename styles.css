@@ -865,7 +865,7 @@ text-align: left;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(235, 245, 255, 0.35);
+  background: var(--bg 0.35);
   color: var(--button-blue);
   border-radius: 8px;
   font-size: 1.1rem;
@@ -876,14 +876,9 @@ text-align: left;
 }
 
 .slide-nav:hover {
-  background: var(--button-blue);
+  background: var(--bg);
   color: white;
   opacity: 1;
-}
-
-.slide-nav:focus-visible {
-  outline: 2px solid var(--button-blue);
-  outline-offset: 2px;
 }
 
 .slide-prev {
@@ -898,6 +893,7 @@ text-align: left;
   text-align: center;
   padding: 1rem 0;
   background: transparent;
+  background-color: none;
 }
 
 .dot {
@@ -917,11 +913,6 @@ text-align: left;
 
 .dot:hover {
   background-color: #7aaedf;
-}
-
-.dot:focus-visible {
-  outline: 2px solid var(--button-blue);
-  outline-offset: 2px;
 }
 
 /* ================= SMALL SLIDESHOW ================= */
