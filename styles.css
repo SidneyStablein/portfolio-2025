@@ -380,6 +380,10 @@ text-align: left;
   margin-bottom: 1rem;
 }
 
+.project-hero {
+  padding-top: 6rem;
+}
+
 .project-hero-content {
   display: flex;
   gap: 2rem;
@@ -422,9 +426,11 @@ text-align: left;
   flex-wrap: nowrap; /* prevent stacking */
 }
 
-
-
-
+.project-split-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
 
 .project-split img,
 .project-split video {
@@ -778,6 +784,12 @@ text-align: left;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   padding: 3rem 0;
+}
+
+.project-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .info-card {
