@@ -868,6 +868,7 @@ text-align: left;
   background: var(--bg 0.35);
   color: var(--button-blue);
   border-radius: 8px;
+  border: 0px solid transparent;
   font-size: 1.1rem;
   padding: 0.55rem 0.85rem;
   cursor: pointer;
@@ -877,8 +878,13 @@ text-align: left;
 
 .slide-nav:hover {
   background: var(--bg);
-  color: white;
+  color: var(--button-blue);
   opacity: 1;
+}
+
+.slide-nav:focus-visible {
+  outline: 2px solid var(--button-blue);
+  outline-offset: 2px;
 }
 
 .slide-prev {
@@ -893,14 +899,14 @@ text-align: left;
   text-align: center;
   padding: 1rem 0;
   background: transparent;
-  background-color: none;
+  background-color: #e31616;
 }
 
 .dot {
   height: 7px;
   width: 7px;
   margin: 0 5px;
-  background-color: var(--medium);
+  background-color: var(--button-blue 0.5);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -915,6 +921,11 @@ text-align: left;
   background-color: #7aaedf;
 }
 
+.dot:focus-visible {
+  outline: 2px solid var(--button-blue);
+  outline-offset: 2px;
+}
+
 /* ================= SMALL SLIDESHOW ================= */
 
 .slideshow-container.small {
@@ -922,13 +933,11 @@ text-align: left;
   margin: 0 auto;
 }
 
-/* makes images visually smaller without breaking functionality */
 .slideshow-container.small .slide img {
   max-height: 380px;
   object-fit: cover;
 }
 
-/* controls scale down */
 .slideshow-container.small .slide-nav {
   font-size: 1.2rem;
   padding: 0.6rem 0.9rem;
