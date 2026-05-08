@@ -344,6 +344,10 @@ text-align: left;
   border-radius: 20px;
 }
 
+.submit:hover {
+  background-color: rgba(214, 234, 255, 0.9);
+}
+
 /* MESSAGE + SEND */
 .message-row textarea {
   flex: 1;
