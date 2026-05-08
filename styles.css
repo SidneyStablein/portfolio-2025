@@ -394,6 +394,7 @@ text-align: left;
 
 .project-hero-meta h1 {
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .project-hero-content {
@@ -669,6 +670,7 @@ text-align: left;
   color: #555;
 }
 
+.project-page h1,
 .project-page h2,
 .project-page h3 {
   text-align: center;
