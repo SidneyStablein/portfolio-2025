@@ -22,6 +22,14 @@ html, body {
   padding-left: clamp(1rem, 4vw, 6vw);
   padding-right: clamp(1rem, 4vw, 6vw);
 }
+
+h2 {
+  text-align: center;
+  margin: 2rem auto 1.5rem;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
 /* ================= HEADER ================= */
 
 .site-header {
@@ -615,8 +623,9 @@ text-align: left;
 
 .image-section h2 {
   font-size: 1.75rem;
-  margin-bottom: 1rem;
-  margin-top: 0;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .image-section p {
