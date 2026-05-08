@@ -348,6 +348,11 @@ text-align: left;
   background-color: rgba(214, 234, 255, 0.9);
 }
 
+.message-row button:hover {
+  background-color: #4CAF50;       
+  cursor: pointer;           
+}
+
 /* MESSAGE + SEND */
 .message-row textarea {
   flex: 1;
