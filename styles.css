@@ -344,12 +344,8 @@ text-align: left;
   border-radius: 20px;
 }
 
-.submit:hover {
-  background-color: rgba(214, 234, 255, 0.9);
-}
-
 .message-row button:hover {
-  background-color: #4CAF50;       
+  background-color: rgba(214, 234, 255, 0.9);    
   cursor: pointer;           
 }
 
