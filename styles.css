@@ -809,10 +809,7 @@ text-align: left;
   aspect-ratio: 3 / 4;        
   padding: 1.25rem;
 
-  background-image: url("assets/images/project-footer-block-image.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--medium);
 
   /* keeps content inside */
   overflow: hidden;
@@ -823,6 +820,16 @@ text-align: left;
   max-height: 55%;        
   object-fit: contain;   
   margin-bottom: 1rem;
+}
+
+.info-card-icon {
+  width: 100%;
+  max-height: 55%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
 }
 
 .info-card-text {
