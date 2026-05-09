@@ -416,7 +416,7 @@ text-align: left;
 /* ================= PAGE SPACING ================= */
 
 .project-page .project-hero {
-  padding-top: 8rem;
+  padding-top: 0;
 }
 
 .section-inner {
