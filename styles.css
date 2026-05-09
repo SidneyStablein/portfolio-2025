@@ -426,6 +426,10 @@ text-align: left;
   padding-right: clamp(1rem, 4vw, 6vw);
 }
 
+.section-inner p {
+  text-align: justify;
+}
+
 .project-gallery-section,
 .image-section {
   padding-top: 4rem;
@@ -637,7 +641,7 @@ text-align: left;
 }
 
 .image-section h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
@@ -694,6 +698,15 @@ text-align: left;
   padding: 0 2rem;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+}
+
+.section-inner h1 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-inner h2 {
+  font-size: 1.5rem;
 }
 
 /* ================= BEFORE/AFTER SLIDERS ================= */
