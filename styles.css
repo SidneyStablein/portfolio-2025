@@ -1011,7 +1011,7 @@ text-align: left;
 .slideshow-split {
   display: flex;
   gap: 3rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slideshow-split .text-side {
@@ -1029,8 +1029,8 @@ text-align: left;
 }
 
 .slideshow-split .slide img {
-  max-height: 300px;
-  object-fit: cover;
+  max-height: none;
+  object-fit: contain;
 }
 
 /* responsive */
@@ -1038,6 +1038,11 @@ text-align: left;
   .slideshow-split {
     flex-direction: column;
   }
+}
+
+.slideshow-container.small .slide img {
+  max-height: none;
+  object-fit: contain;
 }
 
 /* ================= Section Background ================= */
