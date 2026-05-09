@@ -84,10 +84,22 @@ const slideshows = document.querySelectorAll(".slideshow-container");
 
 slideshows.forEach((slideshow) => {
   const slides = slideshow.querySelectorAll(".slide");
-  const dots = slideshow.querySelectorAll(".dot");
+  const dotsContainer = slideshow.querySelector(".dots-container");
+  let dots = slideshow.querySelectorAll(".dot");
   const prevBtn = slideshow.querySelector(".slide-prev");
   const nextBtn = slideshow.querySelector(".slide-next");
   
+  if (dotsContainer && dots.length !== slides.length) {
+    dotsContainer.innerHTML = "";
+    slides.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      dot.dataset.slide = index;
+      dotsContainer.appendChild(dot);
+    });
+    dots = slideshow.querySelectorAll(".dot");
+  }
+
   let currentSlide = 0;
 
   // Show slide by index
