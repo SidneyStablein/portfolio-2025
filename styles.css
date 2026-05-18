@@ -1037,8 +1037,8 @@ text-align: left;
 }
 
 .slideshow-split .slideshow-container.outcome-slideshow .slide img {
-  max-height: 350px;
-  object-fit: cover;
+  max-height: 500px;
+  object-fit: contain;
 }
 
 /* responsive */
