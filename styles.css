@@ -1020,7 +1020,7 @@ text-align: left;
 }
 
 .slideshow-container.outcome-slideshow .slide img {
-  max-height: 240px;
+  max-height: 200px;
   object-fit: cover;
 }
 
