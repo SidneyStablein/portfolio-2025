@@ -875,7 +875,7 @@ text-align: left;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80px;
+  min-height: 100px;
   flex-shrink: 0;
 }
 
