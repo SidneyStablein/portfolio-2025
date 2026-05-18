@@ -996,12 +996,12 @@ text-align: left;
 /* ================= SMALL SLIDESHOW ================= */
 
 .slideshow-container.small {
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
 .slideshow-container.small .slide img {
-  max-height: 320px;
+  max-height: 380px;
   object-fit: cover;
 }
 
@@ -1012,6 +1012,25 @@ text-align: left;
 
 .slideshow-container.small .dots-container {
   padding: 1rem 0;
+}
+
+.slideshow-container.outcome-slideshow {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.slideshow-container.outcome-slideshow .slide img {
+  max-height: 240px;
+  object-fit: cover;
+}
+
+.slideshow-container.outcome-slideshow .slide-nav {
+  font-size: 1rem;
+  padding: 0.45rem 0.75rem;
+}
+
+.slideshow-container.outcome-slideshow .dots-container {
+  padding: 0.6rem 0;
 }
 
 /* ================= SLIDESHOW SPLIT SECTION ================= */
