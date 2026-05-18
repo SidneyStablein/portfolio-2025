@@ -126,7 +126,12 @@ h2 {
 }
 
 .intro-section img {
-  text-align: center;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(70vw, 28rem);
+  max-height: 60vh;
+  margin: 0 auto;
 }
 
 .scroll-arrow {
