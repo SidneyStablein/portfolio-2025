@@ -214,6 +214,7 @@ h2 {
 /* CHECKBOX STYLE */
 .filter-table input[type="checkbox"] {
   appearance: none;
+  -webkit-appearance: none;
   width: 20px;
   height: 20px;
   border: 1.5px solid #2480c3;
@@ -223,7 +224,11 @@ h2 {
 
 /* CHECKED STATE */
 .filter-table input[type="checkbox"]:checked {
-  background: #2480c3;
+    background-image: url("checkmark.svg")
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  background-color: transparent;
 }
 
 /* RIGHT COLUMN */
