@@ -220,15 +220,29 @@ h2 {
   border: 1.5px solid #2480c3;
   background: transparent;
   cursor: pointer;
+
+  position: relative;
+  overflow: visible;
 }
 
 /* CHECKED STATE */
-.filter-table input[type="checkbox"]:checked {
+.filter-table input[type="checkbox"]:checked::after {
+  content: "";
+
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  top: -8px;
+  left: -4px;
+
   background-image: url("/assets/images/checkmark.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30px 30px;
-  background-color: transparent;
+  background-size: contain;
+
+  pointer-events: none;
 }
 
 /* RIGHT COLUMN */
