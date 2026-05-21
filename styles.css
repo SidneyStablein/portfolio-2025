@@ -324,13 +324,17 @@ h2 {
 }
 
 .pill-label-link {
-  position: absolute;
-  top: -0.7rem;
-  left: 0.8rem;
   background: var(--light);
   padding: 0 0.4rem;
   font-size: 0.65rem;
   font-weight: 600;
+}
+
+.website-pill {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
 }
 
 .project-footer h3 {
