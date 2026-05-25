@@ -23,6 +23,13 @@ html, body {
   padding-right: clamp(1rem, 4vw, 6vw);
 }
 
+
+h1, h2, h3, p {
+  font-family: "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 h2 {
   text-align: center;
   margin: 2rem auto 1.5rem;
@@ -337,6 +344,11 @@ h2 {
   align-items: center;
 }
 
+.website-pill: hover {
+  background-color: rgba(214, 234, 255, 0.9);    
+  cursor: pointer;  
+}
+
 .project-footer h3 {
 text-align: left;
 }
@@ -421,7 +433,8 @@ text-align: left;
 .project-hero img {
   width: 100vw;
   height: 60vh;
-  object-fit: cover;
+  object-fit: contain;
+  background-repeat: repeat;
   margin-left: calc(50% - 50vw);
 }
 
