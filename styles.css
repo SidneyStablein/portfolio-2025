@@ -433,7 +433,11 @@ text-align: left;
 .project-hero img {
   width: 100vw;
   height: 60vh;
-  background-repeat: repeat;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
   margin-left: calc(50% - 50vw);
 }
 
