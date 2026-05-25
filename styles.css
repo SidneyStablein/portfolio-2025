@@ -433,7 +433,7 @@ text-align: left;
 .project-hero img {
   width: 100vw;
   height: 60vh;
-  object-fit: contain;
+  object-fit: cover;
   background-repeat: repeat;
   margin-left: calc(50% - 50vw);
 }
