@@ -433,16 +433,8 @@ text-align: left;
 .project-hero img {
   width: 100vw;
   height: 60vh;
+  background-repeat: repeat;
   margin-left: calc(50% - 50vw);
-
-  /* center main image */
-  background-position: center;
-
-  /* repeat left/right */
-  background-repeat: repeat-x;
-
-  /* keep image proportions */
-  background-size: auto 100%;
 }
 
 .project-hero-meta {
